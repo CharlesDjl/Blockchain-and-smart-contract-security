@@ -1,7 +1,5 @@
 #!/bin/bash
 
-mkdir -p oyente_testResults
-
 for file in ./Blockchain-and-smart-contract-security/sol_file/*.sol
 do
 	filename = $(basename "$file")
