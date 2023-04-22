@@ -1,0 +1,142 @@
+
+  .oooooo.             o8o            o8o          
+ d8P'  `Y8b            `"'            `"'          
+888      888  .oooo.o oooo  oooo d8b oooo   .oooo.o
+888      888 d88(  "8 `888  `888""8P `888  d88(  "8
+888      888 `"Y88b.   888   888      888  `"Y88b. 
+`88b    d88' o.  )88b  888   888      888  o.  )88b
+ `Y8bood8P'  8""888P' o888o d888b    o888o 8""888P'
+
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:BasicToken:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.8%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.491657018661 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:BecToken:
+INFO:symExec:Running, please wait...
+!!! SYMBOLIC EXECUTION TIMEOUT !!!
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 72.6%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:BecToken:257:22
+uint256(cnt) * _value
+^
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 50.021214962 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:Ownable:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.5%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.291657924652 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:Pausable:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.8%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.570695161819 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:PausableToken:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 88.2%
+INFO:symExec:	  Arithmetic bugs: 	 True
+INFO:symExec:	  └> Overflow bugs: 	 True
+./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:PausableToken:257:22
+uint256(cnt) * _value
+^
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 13.7095580101 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:SafeMath:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 100.0%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 0.00717520713806 seconds ---
+INFO:symExec:	====== Analysis Completed ======
+
+INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:StandardToken:
+INFO:symExec:Running, please wait...
+INFO:symExec:	============ Results ===========
+INFO:symExec:	  EVM code coverage: 	 99.9%
+INFO:symExec:	  Arithmetic bugs: 	 False
+INFO:symExec:	  └> Overflow bugs: 	 False
+INFO:symExec:	  └> Underflow bugs: 	 False
+INFO:symExec:	  └> Division bugs: 	 False
+INFO:symExec:	  └> Modulo bugs:   	 False
+INFO:symExec:	  └> Truncation bugs: 	 False
+INFO:symExec:	  └> Signedness bugs: 	 False
+INFO:symExec:	  Callstack bug: 	 False
+INFO:symExec:	  Concurrency bug: 	 False
+INFO:symExec:	  Time dependency bug: 	 False
+INFO:symExec:	  Reentrancy bug: 	 False
+INFO:symExec:	 --- 1.63235902786 seconds ---
+INFO:symExec:	====== Analysis Completed ======
