@@ -1,0 +1,3 @@
+Running time: 3.0065834522247314 seconds
+
+Environment variable LD_LIBRARY_PATH not set. Setting it up...
