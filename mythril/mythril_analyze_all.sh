@@ -4,12 +4,12 @@
 mkdir -p results
 
 # 分析sol_file文件夹中的所有.sol文件
-for file in *../sol_file/.sol; do
+for file in ../sol_file/*.sol; do
     filename=$(basename "$file" .sol)
     echo "正在分析：$filename.sol"
     
     # 使用timeout设置运行时间限制，并捕获异常
-    timeout_output=$(timeout 120s myth analyze "$file" 2>&1)
+    timeout_output=$(timeout 180s myth analyze "$file" 2>&1)
     exit_status=$?
     
     if [ $exit_status -eq 124 ]; then
