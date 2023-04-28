@@ -1,0 +1,25 @@
+Compilation warnings/errors on ../sol_file/assert_multitx_2.sol:
+../sol_file/assert_multitx_2.sol:15:5: Warning: No visibility specified. Defaulting to "public".
+    function run() {
+    ^
+Spanning multiple lines.
+../sol_file/assert_multitx_2.sol:19:5: Warning: No visibility specified. Defaulting to "public".
+    function set(uint256 _param) {
+    ^
+Spanning multiple lines.
+../sol_file/assert_multitx_2.sol:11:29: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function AssertMultiTx2(uint256 _param) public {
+                            ^------------^
+../sol_file/assert_multitx_2.sol:15:5: Warning: Function state mutability can be restricted to view
+    function run() {
+    ^
+Spanning multiple lines.
+
+INFO:Detectors:
+Pragma version^0.4.19 (../sol_file/assert_multitx_2.sol#6) allows old versions
+solc-0.4.19 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter AssertMultiTx2.set(uint256)._param (../sol_file/assert_multitx_2.sol#19) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/assert_multitx_2.sol analyzed (1 contracts with 85 detectors), 3 result(s) found

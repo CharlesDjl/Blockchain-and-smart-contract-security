@@ -1,0 +1,16 @@
+Compilation warnings/errors on ../sol_file/constructor_create.sol:
+../sol_file/constructor_create.sol:11:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create.sol:19:5: Warning: No visibility specified. Defaulting to "public". 
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create.sol:19:5: Warning: Function state mutability can be restricted to pure
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/constructor_create.sol#6) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/constructor_create.sol analyzed (2 contracts with 85 detectors), 2 result(s) found

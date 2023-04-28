@@ -1,0 +1,34 @@
+Compilation warnings/errors on ../sol_file/relayer.sol:
+../sol_file/relayer.sol:33:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function execute(bytes memory _data) public {
+                     ^----------------^
+../sol_file/relayer.sol:33:5: Warning: Function state mutability can be restricted to pure
+    function execute(bytes memory _data) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Relayer.relay(Target,bytes) (../sol_file/relayer.sol#19-28) compares to a boolean constant:
+	-require(bool,string)(transactions[transactionId].executed == false,same transaction twice) (../sol_file/relayer.sol#21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/relayer.sol#7) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in Relayer.relay(Target,bytes) (../sol_file/relayer.sol#19-28):
+	- (success) = address(target).call(abi.encodeWithSignature(execute(bytes),_data)) (../sol_file/relayer.sol#26)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter Relayer.relay(Target,bytes)._data (../sol_file/relayer.sol#19) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+relay(Target,bytes) should be declared external:
+	- Relayer.relay(Target,bytes) (../sol_file/relayer.sol#19-28)
+Moreover, the following function parameters should change its data location:
+_data location should be calldata
+execute(bytes) should be declared external:
+	- Target.execute(bytes) (../sol_file/relayer.sol#33-35)
+Moreover, the following function parameters should change its data location:
+_data location should be calldata
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Slither:../sol_file/relayer.sol analyzed (2 contracts with 85 detectors), 7 result(s) found

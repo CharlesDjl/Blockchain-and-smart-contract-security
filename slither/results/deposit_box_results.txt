@@ -1,0 +1,15 @@
+INFO:Detectors:
+DepositBox.balance (../sol_file/deposit_box.sol#4) is never initialized. It is used in:
+	- DepositBox.deposit(uint256) (../sol_file/deposit_box.sol#7-11)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Contract locking ether found:
+	Contract DepositBox (../sol_file/deposit_box.sol#3-13) has payable functions:
+	 - DepositBox.deposit(uint256) (../sol_file/deposit_box.sol#7-11)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#contracts-that-lock-ether
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/deposit_box.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/deposit_box.sol analyzed (1 contracts with 85 detectors), 4 result(s) found

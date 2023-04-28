@@ -1,0 +1,13 @@
+Compilation warnings/errors on ../sol_file/typo_one_command.sol:
+../sol_file/typo_one_command.sol:7:20: Warning: Use of unary + is deprecated.
+        numberOne =+ 1;
+                   ^-^
+
+INFO:Detectors:
+TypoOneCommand.alwaysOne() (../sol_file/typo_one_command.sol#6-8) uses an dangerous unary operator: numberOne = + 1 (../sol_file/typo_one_command.sol#7)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-unary-expressions
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/typo_one_command.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/typo_one_command.sol analyzed (1 contracts with 85 detectors), 3 result(s) found

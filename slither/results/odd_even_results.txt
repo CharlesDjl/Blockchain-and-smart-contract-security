@@ -1,0 +1,26 @@
+INFO:Detectors:
+Reentrancy in OddEven.selectWinner() (../sol_file/odd_even.sol#25-31):
+	External calls:
+	- (success) = players[n % 2].addr.call.value(address(this).balance)() (../sol_file/odd_even.sol#27)
+	State variables written after the call(s):
+	- delete players (../sol_file/odd_even.sol#29)
+	OddEven.players (../sol_file/odd_even.sol#15) can be used in cross function reentrancies:
+	- OddEven.play(uint256) (../sol_file/odd_even.sol#18-23)
+	- OddEven.selectWinner() (../sol_file/odd_even.sol#25-31)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+INFO:Detectors:
+Reentrancy in OddEven.selectWinner() (../sol_file/odd_even.sol#25-31):
+	External calls:
+	- (success) = players[n % 2].addr.call.value(address(this).balance)() (../sol_file/odd_even.sol#27)
+	State variables written after the call(s):
+	- count = 0 (../sol_file/odd_even.sol#30)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/odd_even.sol#7) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in OddEven.selectWinner() (../sol_file/odd_even.sol#25-31):
+	- (success) = players[n % 2].addr.call.value(address(this).balance)() (../sol_file/odd_even.sol#27)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Slither:../sol_file/odd_even.sol analyzed (1 contracts with 85 detectors), 5 result(s) found

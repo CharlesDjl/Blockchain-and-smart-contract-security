@@ -1,0 +1,162 @@
+Compilation warnings/errors on ../sol_file/rubixi.sol:
+../sol_file/rubixi.sol:75:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (collectedFees == 0) throw;
+                                        ^---^
+../sol_file/rubixi.sol:85:41: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (collectedFees == 0) throw;
+                                        ^---^
+../sol_file/rubixi.sol:92:57: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (collectedFees == 0 || _pcent > 100) throw;
+                                                        ^---^
+../sol_file/rubixi.sol:105:49: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (_mult > 300 || _mult < 120) throw;
+                                                ^---^
+../sol_file/rubixi.sol:111:32: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (_fee > 10) throw;
+                               ^---^
+../sol_file/rubixi.sol:66:25: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+                        participants[payoutOrder].etherAddress.send(payoutToSend);
+                        ^-------------------------------------------------------^
+../sol_file/rubixi.sol:77:17: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+                creator.send(collectedFees);
+                ^-------------------------^
+../sol_file/rubixi.sol:87:17: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+                creator.send(_amt);
+                ^----------------^
+../sol_file/rubixi.sol:95:17: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+                creator.send(feesToCollect);
+                ^-------------------------^
+../sol_file/rubixi.sol:15:9: Warning: No visibility specified. Defaulting to "public". 
+        function DynamicPyramid() {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:31:9: Warning: No visibility specified. Defaulting to "public". 
+        function() {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:74:9: Warning: No visibility specified. Defaulting to "public". 
+        function collectAllFees() onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:81:9: Warning: No visibility specified. Defaulting to "public". 
+        function collectFeesInEther(uint _amt) onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:91:9: Warning: No visibility specified. Defaulting to "public". 
+        function collectPercentOfFees(uint _pcent) onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:100:9: Warning: No visibility specified. Defaulting to "public". 
+        function changeOwner(address _owner) onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:104:9: Warning: No visibility specified. Defaulting to "public". 
+        function changeMultiplier(uint _mult) onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:110:9: Warning: No visibility specified. Defaulting to "public". 
+        function changeFeePercentage(uint _fee) onlyowner {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:117:9: Warning: No visibility specified. Defaulting to "public". 
+        function currentMultiplier() constant returns(uint multiplier, string info) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:122:9: Warning: No visibility specified. Defaulting to "public". 
+        function currentFeePercentage() constant returns(uint fee, string info) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:127:9: Warning: No visibility specified. Defaulting to "public". 
+        function currentPyramidBalanceApproximately() constant returns(uint pyramidBalance, string info) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:132:9: Warning: No visibility specified. Defaulting to "public". 
+        function nextPayoutWhenPyramidBalanceTotalsApproximately() constant returns(uint balancePayout) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:136:9: Warning: No visibility specified. Defaulting to "public". 
+        function feesSeperateFromBalanceApproximately() constant returns(uint fees) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:140:9: Warning: No visibility specified. Defaulting to "public". 
+        function totalParticipants() constant returns(uint count) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:144:9: Warning: No visibility specified. Defaulting to "public". 
+        function numberOfParticipantsWaitingForPayout() constant returns(uint count) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/rubixi.sol:148:9: Warning: No visibility specified. Defaulting to "public". 
+        function participantDetails(uint orderInPyramid) constant returns(address Address, uint Payout) {
+        ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Rubixi (../sol_file/rubixi.sol#3-154) contract sets array length with a user-controlled value:
+	- participants.push(Participant(msg.sender,(msg.value * pyramidMultiplier) / 100)) (../sol_file/rubixi.sol#53)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#array-length-assignment
+INFO:Detectors:
+Rubixi.collectPercentOfFees(uint256) (../sol_file/rubixi.sol#91-97) performs a multiplication on the result of a division:
+	- feesToCollect = collectedFees / 100 * _pcent (../sol_file/rubixi.sol#94)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+Rubixi.addPayout(uint256) (../sol_file/rubixi.sol#51-71) ignores return value by participants[payoutOrder].etherAddress.send(payoutToSend) (../sol_file/rubixi.sol#66)
+Rubixi.collectAllFees() (../sol_file/rubixi.sol#74-79) ignores return value by creator.send(collectedFees) (../sol_file/rubixi.sol#77)
+Rubixi.collectFeesInEther(uint256) (../sol_file/rubixi.sol#81-89) ignores return value by creator.send(_amt) (../sol_file/rubixi.sol#87)
+Rubixi.collectPercentOfFees(uint256) (../sol_file/rubixi.sol#91-97) ignores return value by creator.send(feesToCollect) (../sol_file/rubixi.sol#95)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-send
+INFO:Detectors:
+Rubixi.changeOwner(address) (../sol_file/rubixi.sol#100-102) should emit an event for: 
+	- creator = _owner (../sol_file/rubixi.sol#101) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-access-control
+INFO:Detectors:
+Rubixi.collectFeesInEther(uint256) (../sol_file/rubixi.sol#81-89) should emit an event for: 
+	- collectedFees -= _amt (../sol_file/rubixi.sol#88) 
+Rubixi.collectPercentOfFees(uint256) (../sol_file/rubixi.sol#91-97) should emit an event for: 
+	- collectedFees -= feesToCollect (../sol_file/rubixi.sol#96) 
+Rubixi.changeMultiplier(uint256) (../sol_file/rubixi.sol#104-108) should emit an event for: 
+	- pyramidMultiplier = _mult (../sol_file/rubixi.sol#107) 
+Rubixi.changeFeePercentage(uint256) (../sol_file/rubixi.sol#110-114) should emit an event for: 
+	- feePercent = _fee (../sol_file/rubixi.sol#113) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic
+INFO:Detectors:
+Rubixi.changeOwner(address)._owner (../sol_file/rubixi.sol#100) lacks a zero-check on :
+		- creator = _owner (../sol_file/rubixi.sol#101)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Modifier Rubixi.onlyowner() (../sol_file/rubixi.sol#19-21) does not always execute _; or revertReference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-modifier
+INFO:Detectors:
+Deprecated standard detected THROW (../sol_file/rubixi.sol#75):
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected THROW (../sol_file/rubixi.sol#85):
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected THROW (../sol_file/rubixi.sol#92):
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected THROW (../sol_file/rubixi.sol#105):
+	- Usage of "throw" should be replaced with "revert()"
+Deprecated standard detected THROW (../sol_file/rubixi.sol#111):
+	- Usage of "throw" should be replaced with "revert()"
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/rubixi.sol#1) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function Rubixi.DynamicPyramid() (../sol_file/rubixi.sol#15-17) is not in mixedCase
+Parameter Rubixi.addPayout(uint256)._fee (../sol_file/rubixi.sol#51) is not in mixedCase
+Parameter Rubixi.collectFeesInEther(uint256)._amt (../sol_file/rubixi.sol#81) is not in mixedCase
+Parameter Rubixi.collectPercentOfFees(uint256)._pcent (../sol_file/rubixi.sol#91) is not in mixedCase
+Parameter Rubixi.changeOwner(address)._owner (../sol_file/rubixi.sol#100) is not in mixedCase
+Parameter Rubixi.changeMultiplier(uint256)._mult (../sol_file/rubixi.sol#104) is not in mixedCase
+Parameter Rubixi.changeFeePercentage(uint256)._fee (../sol_file/rubixi.sol#110) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Reentrancy in Rubixi.addPayout(uint256) (../sol_file/rubixi.sol#51-71):
+	External calls:
+	- participants[payoutOrder].etherAddress.send(payoutToSend) (../sol_file/rubixi.sol#66)
+	State variables written after the call(s):
+	- balance > participants[payoutOrder].payout (../sol_file/rubixi.sol#64)
+	- balance -= participants[payoutOrder].payout (../sol_file/rubixi.sol#68)
+	- payoutOrder += 1 (../sol_file/rubixi.sol#69)
+Reentrancy in Rubixi.collectAllFees() (../sol_file/rubixi.sol#74-79):
+	External calls:
+	- creator.send(collectedFees) (../sol_file/rubixi.sol#77)
+	State variables written after the call(s):
+	- collectedFees = 0 (../sol_file/rubixi.sol#78)
+Reentrancy in Rubixi.collectFeesInEther(uint256) (../sol_file/rubixi.sol#81-89):
+	External calls:
+	- collectAllFees() (../sol_file/rubixi.sol#83)
+		- creator.send(collectedFees) (../sol_file/rubixi.sol#77)
+	- creator.send(_amt) (../sol_file/rubixi.sol#87)
+	State variables written after the call(s):
+	- collectedFees -= _amt (../sol_file/rubixi.sol#88)
+Reentrancy in Rubixi.collectPercentOfFees(uint256) (../sol_file/rubixi.sol#91-97):
+	External calls:
+	- creator.send(feesToCollect) (../sol_file/rubixi.sol#95)
+	State variables written after the call(s):
+	- collectedFees -= feesToCollect (../sol_file/rubixi.sol#96)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+INFO:Slither:../sol_file/rubixi.sol analyzed (1 contracts with 85 detectors), 31 result(s) found

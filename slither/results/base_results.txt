@@ -1,0 +1,21 @@
+Compilation warnings/errors on ../sol_file/base.sol:
+../sol_file/base.sol:2:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+
+INFO:Detectors:
+Pragma version>=0.5.0 (../sol_file/base.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Base.c (../sol_file/base.sol#10) is never used in Base (../sol_file/base.sol#4-32)
+Base.d (../sol_file/base.sol#11) is never used in Base (../sol_file/base.sol#4-32)
+Base.g (../sol_file/base.sol#20) is never used in Base (../sol_file/base.sol#4-32)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+Base.a (../sol_file/base.sol#6) should be constant 
+Base.b (../sol_file/base.sol#7) should be constant 
+Base.c (../sol_file/base.sol#10) should be constant 
+Base.d (../sol_file/base.sol#11) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:../sol_file/base.sol analyzed (1 contracts with 85 detectors), 9 result(s) found

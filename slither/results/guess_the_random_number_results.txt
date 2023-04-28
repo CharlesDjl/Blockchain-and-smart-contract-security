@@ -1,0 +1,25 @@
+INFO:Detectors:
+GuessTheRandomNumberChallenge.guess(uint8) (../sol_file/guess_the_random_number.sol#21-27) sends eth to arbitrary user
+	Dangerous calls:
+	- msg.sender.transfer(2000000000000000000) (../sol_file/guess_the_random_number.sol#25)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations
+INFO:Detectors:
+GuessTheRandomNumberChallenge.guess(uint8) (../sol_file/guess_the_random_number.sol#21-27) uses a dangerous strict equality:
+	- n == answer (../sol_file/guess_the_random_number.sol#24)
+GuessTheRandomNumberChallenge.isComplete() (../sol_file/guess_the_random_number.sol#17-19) uses a dangerous strict equality:
+	- address(this).balance == 0 (../sol_file/guess_the_random_number.sol#18)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+GuessTheRandomNumberChallenge.guess(uint8) (../sol_file/guess_the_random_number.sol#21-27) uses timestamp for comparisons
+	Dangerous comparisons:
+	- n == answer (../sol_file/guess_the_random_number.sol#24)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Deprecated standard detected answer = uint8(keccak256()(block.blockhash(block.number - 1),now)) (../sol_file/guess_the_random_number.sol#14):
+	- Usage of "block.blockhash()" should be replaced with "blockhash()"
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards
+INFO:Detectors:
+Pragma version^0.4.21 (../sol_file/guess_the_random_number.sol#7) allows old versions
+solc-0.4.21 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/guess_the_random_number.sol analyzed (1 contracts with 85 detectors), 7 result(s) found

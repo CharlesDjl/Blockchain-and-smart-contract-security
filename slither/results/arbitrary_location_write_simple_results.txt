@@ -1,0 +1,19 @@
+INFO:Detectors:
+Wallet (../sol_file/arbitrary_location_write_simple.sol#3-33) contract sets array length with a user-controlled value:
+	- bonusCodes.push(c) (../sol_file/arbitrary_location_write_simple.sol#16)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#array-length-assignment
+INFO:Detectors:
+Wallet.PopBonusCode() (../sol_file/arbitrary_location_write_simple.sol#19-22) contains a tautology or contradiction:
+	- require(bool)(0 <= bonusCodes.length) (../sol_file/arbitrary_location_write_simple.sol#20)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#tautology-or-contradiction
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/arbitrary_location_write_simple.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function Wallet.PushBonusCode(uint256) (../sol_file/arbitrary_location_write_simple.sol#15-17) is not in mixedCase
+Function Wallet.PopBonusCode() (../sol_file/arbitrary_location_write_simple.sol#19-22) is not in mixedCase
+Function Wallet.UpdateBonusCodeAt(uint256,uint256) (../sol_file/arbitrary_location_write_simple.sol#24-27) is not in mixedCase
+Function Wallet.Destroy() (../sol_file/arbitrary_location_write_simple.sol#29-32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/arbitrary_location_write_simple.sol analyzed (1 contracts with 85 detectors), 8 result(s) found

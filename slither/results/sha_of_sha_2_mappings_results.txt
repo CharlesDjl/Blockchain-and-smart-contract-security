@@ -1,0 +1,19 @@
+Compilation warnings/errors on ../sol_file/sha_of_sha_2_mappings.sol:
+../sol_file/sha_of_sha_2_mappings.sol:12:5: Warning: No visibility specified. Defaulting to "public". 
+    constructor(){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_2_mappings.sol:16:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(address a){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_2_mappings.sol:16:5: Warning: Function state mutability can be restricted to view
+    function check(address a){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+ShaOfSha2Mappings.n (../sol_file/sha_of_sha_2_mappings.sol#10) is never initialized. It is used in:
+	- ShaOfSha2Mappings.check(address) (../sol_file/sha_of_sha_2_mappings.sol#16-18)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/sha_of_sha_2_mappings.sol#5) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/sha_of_sha_2_mappings.sol analyzed (1 contracts with 85 detectors), 3 result(s) found

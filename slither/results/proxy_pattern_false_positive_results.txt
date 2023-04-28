@@ -1,0 +1,25 @@
+INFO:Detectors:
+proxy.proxyCall(address,bytes) (../sol_file/proxy_pattern_false_positive.sol#6-8) uses delegatecall to a input-controlled function id
+	- require(bool)(! _to.delegatecall(_data)) (../sol_file/proxy_pattern_false_positive.sol#7)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#controlled-delegatecall
+INFO:Detectors:
+proxy.owner (../sol_file/proxy_pattern_false_positive.sol#4) is never initialized. It is used in:
+	- proxy.withdraw() (../sol_file/proxy_pattern_false_positive.sol#9-12)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Pragma version^0.4.24 (../sol_file/proxy_pattern_false_positive.sol#1) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in proxy.proxyCall(address,bytes) (../sol_file/proxy_pattern_false_positive.sol#6-8):
+	- require(bool)(! _to.delegatecall(_data)) (../sol_file/proxy_pattern_false_positive.sol#7)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Contract proxy (../sol_file/proxy_pattern_false_positive.sol#3-13) is not in CapWords
+Parameter proxy.proxyCall(address,bytes)._to (../sol_file/proxy_pattern_false_positive.sol#6) is not in mixedCase
+Parameter proxy.proxyCall(address,bytes)._data (../sol_file/proxy_pattern_false_positive.sol#6) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+proxy.owner (../sol_file/proxy_pattern_false_positive.sol#4) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:../sol_file/proxy_pattern_false_positive.sol analyzed (1 contracts with 85 detectors), 9 result(s) found

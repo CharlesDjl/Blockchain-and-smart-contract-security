@@ -1,0 +1,14 @@
+Compilation warnings/errors on ../sol_file/runtime_user_input_call.sol:
+../sol_file/runtime_user_input_call.sol:9:5: Warning: No visibility specified. Defaulting to "public".
+    function check(address b){
+    ^
+Spanning multiple lines.
+../sol_file/runtime_user_input_call.sol:16:5: Warning: No visibility specified. Defaulting to "public".
+    function foo() returns(uint);
+    ^---------------------------^
+
+INFO:Detectors:
+Pragma version^0.4.19 (../sol_file/runtime_user_input_call.sol#5) allows old versions
+solc-0.4.19 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/runtime_user_input_call.sol analyzed (2 contracts with 85 detectors), 2 result(s) found

@@ -1,0 +1,10 @@
+Compilation warnings/errors on ../sol_file/tokensalechallenge.sol:
+../sol_file/tokensalechallenge.sol:12:33: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function TokenSaleChallenge(address _player) public payable {
+                                ^-------------^
+
+INFO:Detectors:
+Pragma version^0.4.21 (../sol_file/tokensalechallenge.sol#6) allows old versions
+solc-0.4.21 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/tokensalechallenge.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
