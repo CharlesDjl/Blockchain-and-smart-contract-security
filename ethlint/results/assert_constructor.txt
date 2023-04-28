@@ -1,0 +1,10 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/assert_constructor.sol
+[24m[1m  9:4  [22m  [33mwarning  [39m  Constructor declaration style is deprecated    [3mconstructor[23m
+
+[31m✖ [39m[31m1 warning[39m[31m found.
+
+[39m
+real	0m0.451s
+user	0m0.504s
+sys	0m0.055s

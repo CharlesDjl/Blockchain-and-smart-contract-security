@@ -1,0 +1,16 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/old_blockhash.sol
+[24m[1m  8:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                               [3mindentation[23m
+[1m  9:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                               [3mindentation[23m
+[1m  15:8  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  19:8  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  20:8  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  23:8  [22m  [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+[1m  27:8  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+
+[31m✖ [39m[31m2 errors[39m[31m, 5 warnings[39m[31m found.
+
+[39m
+real	0m0.475s
+user	0m0.527s
+sys	0m0.063s

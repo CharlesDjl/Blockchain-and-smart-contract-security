@@ -1,0 +1,10 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/gas_model.sol
+[24m[1m  9:4  [22m  [31merror  [39m  No visibility specified explicitly for check function.    [3msecurity/enforce-explicit-visibility[23m
+
+[31m✖ [39m[31m1 error[39m[31m found.
+
+[39m
+real	0m0.440s
+user	0m0.501s
+sys	0m0.032s

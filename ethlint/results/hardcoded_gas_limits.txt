@@ -1,0 +1,10 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/hardcoded_gas_limits.sol
+[24m[1m  32:25  [22m  [31merror  [39m  Syntax error: unexpected token {    [3m[23m
+
+[31m✖ [39m[31m1 error[39m[31m found.
+
+[39m
+real	0m0.436s
+user	0m0.465s
+sys	0m0.068s

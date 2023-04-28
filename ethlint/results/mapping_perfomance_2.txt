@@ -1,0 +1,19 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/mapping_perfomance_2.sol
+[24m[1m  21:4  [22m   [31merror  [39m  No visibility specified explicitly for set function.      [3msecurity/enforce-explicit-visibility[23m
+[1m  34:4  [22m   [31merror  [39m  No visibility specified explicitly for check function.    [3msecurity/enforce-explicit-visibility[23m
+[1m  34:19  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  34:31  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  35:18  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  35:30  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  35:42  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  36:22  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  37:22  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+[1m  38:22  [22m  [31merror  [39m  Only use indent of 8 spaces.                              [3mindentation[23m
+
+[31m✖ [39m[31m10 errors[39m[31m found.
+
+[39m
+real	0m0.483s
+user	0m0.529s
+sys	0m0.068s

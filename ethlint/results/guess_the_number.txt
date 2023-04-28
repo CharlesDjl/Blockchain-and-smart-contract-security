@@ -1,0 +1,26 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/guess_the_number.sol
+[24m[1m  13:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  16:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                    [3merror-reason[23m
+[1m  18:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  20:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  21:29  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                          [3mvisibility-first[23m
+[1m  26:35  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                          [3mvisibility-first[23m
+[1m  28:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                    [3merror-reason[23m
+[1m  29:8  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  31:60  [22m  [31merror  [39m    Only use indent of 12 spaces.                                                             [3mindentation[23m
+[1m  31:61  [22m  [33mwarning  [39m  There should be no whitespace or comments between argument and the comma following it.    [3mcomma-whitespace[23m
+[1m  31:64  [22m  [31merror  [39m    Only use indent of 12 spaces.                                                             [3mindentation[23m
+[1m  31:65  [22m  [33mwarning  [39m  There should be no whitespace or comments between argument and the comma following it.    [3mcomma-whitespace[23m
+[1m  32:0  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                              [3mindentation[23m
+[1m  32:43  [22m  [31merror  [39m    Only use indent of 12 spaces.                                                             [3mindentation[23m
+[1m  34:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  47:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                                         [3mno-trailing-whitespace[23m
+[1m  50:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                    [3merror-reason[23m
+
+[31m✖ [39m[31m4 errors[39m[31m, 13 warnings[39m[31m found.
+
+[39m
+real	0m0.474s
+user	0m0.531s
+sys	0m0.053s

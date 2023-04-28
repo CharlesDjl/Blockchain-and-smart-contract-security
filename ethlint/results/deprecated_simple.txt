@@ -1,0 +1,20 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/deprecated_simple.sol
+[24m[1m  7:36  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                 [3mno-constant[23m
+[1m  9:28  [22m   [33mwarning  [39m  Avoid using 'block.blockhash'.                               [3msecurity/no-block-members[23m
+[1m  10:8  [22m   [31merror  [39m    Variable 'hashofhash' is declared but never used.            [3mno-unused-vars[23m
+[1m  10:29  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.        [3msecurity/no-sha3[23m
+[1m  15:12  [22m  [31merror  [39m    Consider using 'revert()' in place of deprecated 'throw'.    [3msecurity/no-throw[23m
+[1m  18:22  [22m  [33mwarning  [39m  Avoid using low-level function 'callcode'.                   [3msecurity/no-low-level-calls[23m
+[1m  20:12  [22m  [31merror  [39m    Variable 'a' is declared but never used.                     [3mno-unused-vars[23m
+[1m  22:13  [22m  [31merror  [39m    Variable 'x' is declared but never used.                     [3mno-unused-vars[23m
+[1m  22:16  [22m  [31merror  [39m    Variable 'y' is declared but never used.                     [3mno-unused-vars[23m
+[1m  22:19  [22m  [31merror  [39m    Variable 'z' is declared but never used.                     [3mno-unused-vars[23m
+[1m  24:8  [22m   [33mwarning  [39m  'suicide' is deprecated. Use 'selfdestruct' instead.         [3mdeprecated-suicide[23m
+
+[31m✖ [39m[31m7 errors[39m[31m, 4 warnings[39m[31m found.
+
+[39m
+real	0m0.466s
+user	0m0.515s
+sys	0m0.055s

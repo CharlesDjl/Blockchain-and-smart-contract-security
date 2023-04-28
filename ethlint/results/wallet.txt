@@ -1,0 +1,12 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/wallet.sol
+[24m[1m  12:37  [22m  [31merror  [39m  String literal must be quoted with double quotes.        [3mquotes[23m
+[1m  18:47  [22m  [31merror  [39m  String literal must be quoted with double quotes.        [3mquotes[23m
+[1m  24:19  [22m  [31merror  [39m  Consider using 'transfer' in place of 'call.value()'.    [3msecurity/no-call-value[23m
+
+[31m✖ [39m[31m3 errors[39m[31m found.
+
+[39m
+real	0m0.462s
+user	0m0.521s
+sys	0m0.047s

@@ -1,0 +1,16 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/TokenSale.sol
+[24m[1m  6:4  [22m    [33mwarning  [39m  Constructor declaration style is deprecated                   [3mconstructor[23m
+[1m  6:4  [22m    [31merror  [39m    No visibility specified explicitly for Tokensale function.    [3msecurity/enforce-explicit-visibility[23m
+[1m  6:25  [22m   [33mwarning  [39m  Code contains empty block                                     [3mno-empty-blocks[23m
+[1m  8:31  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                  [3mno-constant[23m
+[1m  16:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                   [3mconstructor[23m
+[1m  16:4  [22m   [31merror  [39m    No visibility specified explicitly for Presale function.      [3msecurity/enforce-explicit-visibility[23m
+[1m  16:35  [22m  [33mwarning  [39m  Code contains empty block                                     [3mno-empty-blocks[23m
+
+[31m✖ [39m[31m2 errors[39m[31m, 5 warnings[39m[31m found.
+
+[39m
+real	0m0.438s
+user	0m0.478s
+sys	0m0.047s

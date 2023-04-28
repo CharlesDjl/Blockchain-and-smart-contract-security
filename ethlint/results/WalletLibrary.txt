@@ -1,0 +1,165 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/WalletLibrary.sol
+[24m[1m  19:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  20:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  23:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  24:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  25:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  28:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  31:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  33:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  35:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  37:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  42:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  45:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  47:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  49:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  51:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  53:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  53:2  [22m    [31merror  [39m    No visibility specified explicitly for isOwner function.                                   [3msecurity/enforce-explicit-visibility[23m
+[1m  53:34  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  55:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  55:69  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  58:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  60:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  61:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  61:2  [22m    [31merror  [39m    No visibility specified explicitly for confirm function.                                   [3msecurity/enforce-explicit-visibility[23m
+[1m  68:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  72:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  75:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  79:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  84:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  87:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  91:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  94:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  99:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  99:2  [22m    [31merror  [39m    No visibility specified explicitly for fallback function.                                  [3msecurity/enforce-explicit-visibility[23m
+[1m  103:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  107:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  107:2  [22m   [31merror  [39m    No visibility specified explicitly for initMultiowned function.                            [3msecurity/enforce-explicit-visibility[23m
+[1m  113:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  114:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  117:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  120:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  127:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  128:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  129:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  131:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  134:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  134:66  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  134:82  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  144:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  146:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  146:51  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  146:67  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  158:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  160:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  160:54  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  160:70  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  170:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  172:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  172:63  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  172:79  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  177:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  180:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  180:46  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  182:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  184:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  184:2  [22m   [31merror  [39m    No visibility specified explicitly for isOwner function.                                   [3msecurity/enforce-explicit-visibility[23m
+[1m  184:34  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  186:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  188:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  188:69  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  198:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  201:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  201:2  [22m   [31merror  [39m    No visibility specified explicitly for initDaylimit function.                              [3msecurity/enforce-explicit-visibility[23m
+[1m  204:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  206:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  206:56  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  206:72  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  208:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  210:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  210:44  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  210:60  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  212:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  215:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  215:31  [22m  [33mwarning  [39m  There should be no whitespace or comments between the opening brace '{' and first item.    [3mwhitespace[23m
+[1m  215:53  [22m  [31merror  [39m    Consider using 'revert()' in place of deprecated 'throw'.                                  [3msecurity/no-throw[23m
+[1m  215:62  [22m  [33mwarning  [39m  There should be no whitespace or comments between the last item and closing brace '}'.     [3mwhitespace[23m
+[1m  219:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  219:2  [22m   [31merror  [39m    No visibility specified explicitly for initWallet function.                                [3msecurity/enforce-explicit-visibility[23m
+[1m  222:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  225:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  225:44  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  225:60  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.                         [3mvisibility-first[23m
+[1m  226:4  [22m   [33mwarning  [39m  'suicide' is deprecated. Use 'selfdestruct' instead.                                       [3mdeprecated-suicide[23m
+[1m  227:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  233:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  237:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  238:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  241:17  [22m  [31merror  [39m    Consider using 'transfer' in place of 'call.value()'.                                      [3msecurity/no-call-value[23m
+[1m  242:10  [22m  [31merror  [39m    Consider using 'revert()' in place of deprecated 'throw'.                                  [3msecurity/no-throw[23m
+[1m  244:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  247:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  247:15  [22m  [31merror  [39m    'sha3(...)' should be replaced with 'keccak256(...)'.                                      [3msecurity/no-sha3[23m
+[1m  249:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  254:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  258:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  260:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  260:78  [22m  [33mwarning  [39m  Code contains empty block                                                                  [3mno-empty-blocks[23m
+[1m  267:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  271:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  271:2  [22m   [31merror  [39m    No visibility specified explicitly for confirm function.                                   [3msecurity/enforce-explicit-visibility[23m
+[1m  273:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  274:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  277:26  [22m  [31merror  [39m    Consider using 'transfer' in place of 'call.value()'.                                      [3msecurity/no-call-value[23m
+[1m  278:10  [22m  [31merror  [39m    Consider using 'revert()' in place of deprecated 'throw'.                                  [3msecurity/no-throw[23m
+[1m  281:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  282:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  283:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  285:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  289:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  299:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  301:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  302:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  303:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  309:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  311:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  324:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  326:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  330:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  331:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  332:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  339:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  343:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  346:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  347:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  352:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  353:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  356:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  359:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  359:27  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                               [3mno-constant[23m
+[1m  359:60  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').                                            [3msecurity/no-block-members[23m
+[1m  361:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  365:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  367:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                                               [3mindentation[23m
+[1m  372:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  375:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  378:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  380:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  382:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  383:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  384:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  387:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  389:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  391:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  393:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  394:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+[1m  397:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                                               [3mindentation[23m
+
+[31m✖ [39m[31m138 errors[39m[31m, 18 warnings[39m[31m found.
+
+[39m
+real	0m0.753s
+user	0m0.908s
+sys	0m0.095s

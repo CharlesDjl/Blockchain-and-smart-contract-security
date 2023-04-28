@@ -1,0 +1,27 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/simple_dao.sol
+[24m[1m  9:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  10:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                          [3mno-trailing-whitespace[23m
+[1m  11:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  11:38  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.           [3mvisibility-first[23m
+[1m  13:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  14:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                          [3mno-trailing-whitespace[23m
+[1m  15:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  16:26  [22m  [33mwarning  [39m  Single space should be either on both sides of '>=' or not at all.         [3moperator-whitespace[23m
+[1m  17:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                               [3mindentation[23m
+[1m  17:6  [22m   [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  17:25  [22m  [31merror  [39m    Consider using 'transfer' in place of 'call.value()'.                      [3msecurity/no-call-value[23m
+[1m  18:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                               [3mindentation[23m
+[1m  18:6  [22m   [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+[1m  20:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  20:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                          [3mno-trailing-whitespace[23m
+[1m  22:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  22:40  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.           [3mvisibility-first[23m
+[1m  24:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+
+[31m✖ [39m[31m10 errors[39m[31m, 8 warnings[39m[31m found.
+
+[39m
+real	0m0.464s
+user	0m0.506s
+sys	0m0.056s

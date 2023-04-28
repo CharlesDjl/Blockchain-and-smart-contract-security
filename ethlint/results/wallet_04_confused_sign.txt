@@ -1,0 +1,14 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/wallet_04_confused_sign.sol
+[24m[1m  10:4  [22m  [33mwarning  [39m  Line contains trailing whitespace         [3mno-trailing-whitespace[23m
+[1m  18:5  [22m  [31merror  [39m    Only use indent of 8 spaces.              [3mindentation[23m
+[1m  21:4  [22m  [33mwarning  [39m  Line contains trailing whitespace         [3mno-trailing-whitespace[23m
+[1m  23:8  [22m  [33mwarning  [39m  Provide an error message for require()    [3merror-reason[23m
+[1m  31:8  [22m  [33mwarning  [39m  Provide an error message for require()    [3merror-reason[23m
+
+[31m✖ [39m[31m1 error[39m[31m, 4 warnings[39m[31m found.
+
+[39m
+real	0m0.469s
+user	0m0.511s
+sys	0m0.063s

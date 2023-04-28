@@ -1,0 +1,30 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/Lockdrop.sol
+[24m[1m  1:1  [22m     [33mwarning  [39m  Line contains trailing whitespace                  [3mno-trailing-whitespace[23m
+[1m  11:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                       [3msecurity/no-inline-assembly[23m
+[1m  16:4  [22m    [33mwarning  [39m  Line contains trailing whitespace                  [3mno-trailing-whitespace[23m
+[1m  21:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                       [3msecurity/no-inline-assembly[23m
+[1m  45:4  [22m    [33mwarning  [39m  Line contains trailing whitespace                  [3mno-trailing-whitespace[23m
+[1m  70:75  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  85:50  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  89:41  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  90:39  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  91:42  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  92:8  [22m    [33mwarning  [39m  Line contains trailing whitespace                  [3mno-trailing-whitespace[23m
+[1m  93:8  [22m    [33mwarning  [39m  Provide an error message for revert()              [3merror-reason[23m
+[1m  100:8  [22m   [33mwarning  [39m  Provide an error message for require()             [3merror-reason[23m
+[1m  100:16  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  108:8  [22m   [33mwarning  [39m  Provide an error message for require()             [3merror-reason[23m
+[1m  108:16  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  120:8  [22m   [33mwarning  [39m  Line exceeds the limit of 145 characters           [3mmax-len[23m
+[1m  121:8  [22m   [33mwarning  [39m  Line exceeds the limit of 145 characters           [3mmax-len[23m
+[1m  122:8  [22m   [33mwarning  [39m  Line exceeds the limit of 145 characters           [3mmax-len[23m
+[1m  123:8  [22m   [33mwarning  [39m  Line exceeds the limit of 145 characters           [3mmax-len[23m
+[1m  137:12  [22m  [33mwarning  [39m  Provide an error message for require()             [3merror-reason[23m
+
+[31m✖ [39m[31m2 errors[39m[31m, 19 warnings[39m[31m found.
+
+[39m
+real	0m0.565s
+user	0m0.667s
+sys	0m0.070s

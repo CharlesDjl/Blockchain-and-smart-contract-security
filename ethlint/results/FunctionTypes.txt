@@ -1,0 +1,19 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/FunctionTypes.sol
+[24m[1m  9:4  [22m    [33mwarning  [39m  Line contains trailing whitespace                    [3mno-trailing-whitespace[23m
+[1m  10:35  [22m  [33mwarning  [39m  Provide an error message for require()               [3merror-reason[23m
+[1m  11:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                    [3mno-trailing-whitespace[23m
+[1m  13:32  [22m  [31merror  [39m    String literal must be quoted with double quotes.    [3mquotes[23m
+[1m  16:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                    [3mno-trailing-whitespace[23m
+[1m  18:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                         [3mindentation[23m
+[1m  19:8  [22m   [33mwarning  [39m  Line contains trailing whitespace                    [3mno-trailing-whitespace[23m
+[1m  21:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                    [3mno-trailing-whitespace[23m
+[1m  23:32  [22m  [31merror  [39m    String literal must be quoted with double quotes.    [3mquotes[23m
+[1m  26:8  [22m   [31merror  [39m    Avoid using Inline Assembly.                         [3msecurity/no-inline-assembly[23m
+
+[31m✖ [39m[31m4 errors[39m[31m, 6 warnings[39m[31m found.
+
+[39m
+real	0m0.471s
+user	0m0.522s
+sys	0m0.048s

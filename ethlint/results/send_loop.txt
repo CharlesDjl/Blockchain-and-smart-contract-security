@@ -1,0 +1,18 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/send_loop.sol
+[24m[1m  10:1  [22m   [33mwarning  [39m  Line contains trailing whitespace                [3mno-trailing-whitespace[23m
+[1m  11:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+[1m  12:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+[1m  14:1  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+[1m  17:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+[1m  20:1  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+[1m  22:9  [22m   [33mwarning  [39m  Provide an error message for require()           [3merror-reason[23m
+[1m  22:17  [22m  [33mwarning  [39m  Consider using 'transfer' in place of 'send'.    [3msecurity/no-send[23m
+[1m  24:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                     [3mindentation[23m
+
+[31m✖ [39m[31m6 errors[39m[31m, 3 warnings[39m[31m found.
+
+[39m
+real	0m0.445s
+user	0m0.494s
+sys	0m0.044s

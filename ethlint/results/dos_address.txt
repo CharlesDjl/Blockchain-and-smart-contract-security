@@ -1,0 +1,11 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/dos_address.sol
+[24m[1m  16:12  [22m  [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+[1m  17:10  [22m  [31merror  [39m    Only use indent of 12 spaces.                                              [3mindentation[23m
+
+[31m✖ [39m[31m1 error[39m[31m, 1 warning[39m[31m found.
+
+[39m
+real	0m0.464s
+user	0m0.537s
+sys	0m0.028s

@@ -1,0 +1,14 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/unused_variables.sol
+[24m[1m  8:2  [22m    [33mwarning  [39m  Line contains trailing whitespace           [3mno-trailing-whitespace[23m
+[1m  17:1  [22m   [33mwarning  [39m  Line contains trailing whitespace           [3mno-trailing-whitespace[23m
+[1m  23:12  [22m  [31merror  [39m    Variable 'x' is declared but never used.    [3mno-unused-vars[23m
+[1m  30:4  [22m   [33mwarning  [39m  Line contains trailing whitespace           [3mno-trailing-whitespace[23m
+[1m  33:8  [22m   [33mwarning  [39m  Line contains trailing whitespace           [3mno-trailing-whitespace[23m
+
+[31m✖ [39m[31m1 error[39m[31m, 4 warnings[39m[31m found.
+
+[39m
+real	0m0.464s
+user	0m0.510s
+sys	0m0.061s

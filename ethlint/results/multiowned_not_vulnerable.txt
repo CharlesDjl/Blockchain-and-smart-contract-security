@@ -1,0 +1,36 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/multiowned_not_vulnerable.sol
+[24m[1m  7:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  8:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  9:2  [22m    [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  14:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  17:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  18:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  22:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  23:4  [22m   [33mwarning  [39m  Provide an error message for require()                                [3merror-reason[23m
+[1m  25:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  26:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  30:1  [22m   [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  31:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  31:46  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.    [3mvisibility-first[23m
+[1m  32:4  [22m   [33mwarning  [39m  Provide an error message for require()                                [3merror-reason[23m
+[1m  35:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  36:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  40:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  40:49  [22m  [33mwarning  [39m  Visibility modifier "external" should come before other modifiers.    [3mvisibility-first[23m
+[1m  41:4  [22m   [33mwarning  [39m  Provide an error message for require()                                [3merror-reason[23m
+[1m  44:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  48:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                     [3mno-trailing-whitespace[23m
+[1m  49:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  49:2  [22m   [31merror  [39m    No visibility specified explicitly for withdrawAll function.          [3msecurity/enforce-explicit-visibility[23m
+[1m  51:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  53:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+[1m  53:2  [22m   [31merror  [39m    No visibility specified explicitly for fallback function.             [3msecurity/enforce-explicit-visibility[23m
+[1m  54:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                          [3mindentation[23m
+
+[31m✖ [39m[31m16 errors[39m[31m, 11 warnings[39m[31m found.
+
+[39m
+real	0m0.477s
+user	0m0.532s
+sys	0m0.056s

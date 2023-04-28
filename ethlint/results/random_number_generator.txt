@@ -1,0 +1,14 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/random_number_generator.sol
+[24m[1m  5:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                         [3mindentation[23m
+[1m  5:26  [22m  [33mwarning  [39m  Avoid using 'block.timestamp'.                                       [3msecurity/no-block-members[23m
+[1m  7:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                         [3mindentation[23m
+[1m  7:33  [22m  [33mwarning  [39m  Visibility modifier "private" should come before other modifiers.    [3mvisibility-first[23m
+[1m  15:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                         [3mindentation[23m
+
+[31m✖ [39m[31m3 errors[39m[31m, 2 warnings[39m[31m found.
+
+[39m
+real	0m0.462s
+user	0m0.476s
+sys	0m0.085s

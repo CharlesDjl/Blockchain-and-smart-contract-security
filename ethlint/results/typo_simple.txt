@@ -1,0 +1,12 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/typo_simple.sol
+[24m[1m  9:8  [22m    [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+[1m  14:4  [22m   [33mwarning  [39m  Line contains trailing whitespace                                          [3mno-trailing-whitespace[23m
+[1m  15:25  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.           [3mvisibility-first[23m
+
+[31m✖ [39m[31m3 warnings[39m[31m found.
+
+[39m
+real	0m0.459s
+user	0m0.507s
+sys	0m0.056s

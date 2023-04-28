@@ -1,0 +1,26 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/typo_safe_math.sol
+[24m[1m  12:2  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  17:6  [22m  [31merror  [39m    Only use indent of 8 spaces.                                               [3mindentation[23m
+[1m  21:4  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  24:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  29:2  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  30:4  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  35:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  40:2  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  41:4  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  45:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  50:2  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  52:4  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  55:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  61:2  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  62:4  [22m  [33mwarning  [39m  Provide an error message for require()                                     [3merror-reason[23m
+[1m  64:0  [22m  [31merror  [39m    Only use indent of 4 spaces.                                               [3mindentation[23m
+[1m  75:8  [22m  [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+
+[31m✖ [39m[31m11 errors[39m[31m, 6 warnings[39m[31m found.
+
+[39m
+real	0m0.491s
+user	0m0.577s
+sys	0m0.031s

@@ -1,0 +1,14 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/guess_the_random_number.sol
+[24m[1m  12:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated        [3mconstructor[23m
+[1m  13:8  [22m   [33mwarning  [39m  Provide an error message for require()             [3merror-reason[23m
+[1m  14:33  [22m  [33mwarning  [39m  Avoid using 'block.blockhash'.                     [3msecurity/no-block-members[23m
+[1m  14:68  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').    [3msecurity/no-block-members[23m
+[1m  22:8  [22m   [33mwarning  [39m  Provide an error message for require()             [3merror-reason[23m
+
+[31m✖ [39m[31m5 warnings[39m[31m found.
+
+[39m
+real	0m0.482s
+user	0m0.545s
+sys	0m0.053s

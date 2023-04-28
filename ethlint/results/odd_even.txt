@@ -1,0 +1,21 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/odd_even.sol
+[24m[1m  19:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  19:42  [22m  [31merror  [39m  String literal must be quoted with double quotes.        [3mquotes[23m
+[1m  20:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  21:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  22:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  26:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  27:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  27:49  [22m  [31merror  [39m  Consider using 'transfer' in place of 'call.value()'.    [3msecurity/no-call-value[23m
+[1m  28:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  28:29  [22m  [31merror  [39m  String literal must be quoted with double quotes.        [3mquotes[23m
+[1m  29:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+[1m  30:12  [22m  [31merror  [39m  Only use indent of 8 spaces.                             [3mindentation[23m
+
+[31m✖ [39m[31m12 errors[39m[31m found.
+
+[39m
+real	0m0.473s
+user	0m0.517s
+sys	0m0.061s

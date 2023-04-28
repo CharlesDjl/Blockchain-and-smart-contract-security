@@ -1,0 +1,7 @@
+
+[32mNo issues found.
+
+[39m
+real	0m0.455s
+user	0m0.483s
+sys	0m0.081s

@@ -1,0 +1,50 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/MDTCrowdsale.sol
+[24m[1m  26:8  [22m    [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  36:8  [22m    [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  47:8  [22m    [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  58:8  [22m    [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  68:8  [22m    [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  163:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  196:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  214:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  228:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  243:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  257:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  292:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  293:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  302:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  303:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  313:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  331:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  410:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                                                 [3mconstructor[23m
+[1m  410:4  [22m   [31merror  [39m    No visibility specified explicitly for Crowdsale function.                                  [3msecurity/enforce-explicit-visibility[23m
+[1m  411:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  412:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  413:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  414:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  431:4  [22m   [31merror  [39m    No visibility specified explicitly for fallback function.                                   [3msecurity/enforce-explicit-visibility[23m
+[1m  436:4  [22m   [31merror  [39m    No visibility specified explicitly for buyTokens function.                                  [3msecurity/enforce-explicit-visibility[23m
+[1m  437:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  438:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  449:8  [22m   [33mwarning  [39m  Use emit statements for triggering events.                                                  [3memit[23m
+[1m  461:38  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                                [3mno-constant[23m
+[1m  469:31  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                                [3mno-constant[23m
+[1m  478:1  [22m   [31merror  [39m    contract 'CappedCrowdsale': There should be no indentation before top-level declaration.    [3mindentation[23m
+[1m  482:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                                                 [3mconstructor[23m
+[1m  482:4  [22m   [31merror  [39m    No visibility specified explicitly for CappedCrowdsale function.                            [3msecurity/enforce-explicit-visibility[23m
+[1m  483:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  489:38  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                                [3mno-constant[23m
+[1m  496:31  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                                [3mno-constant[23m
+[1m  512:4  [22m   [31merror  [39m    No visibility specified explicitly for addToWhitelist function.                             [3msecurity/enforce-explicit-visibility[23m
+[1m  513:8  [22m   [33mwarning  [39m  Provide an error message for require()                                                      [3merror-reason[23m
+[1m  519:38  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                                                [3mno-constant[23m
+[1m  527:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                                                 [3mconstructor[23m
+[1m  527:4  [22m   [31merror  [39m    No visibility specified explicitly for MDTCrowdsale function.                               [3msecurity/enforce-explicit-visibility[23m
+
+[31m✖ [39m[31m7 errors[39m[31m, 34 warnings[39m[31m found.
+
+[39m
+real	0m0.756s
+user	0m0.936s
+sys	0m0.092s

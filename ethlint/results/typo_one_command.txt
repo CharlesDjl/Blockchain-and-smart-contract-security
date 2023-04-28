@@ -1,0 +1,10 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/typo_one_command.sol
+[24m[1m  7:8  [22m  [33mwarning  [39m  Assignment operator must have exactly single space on both sides of it.    [3moperator-whitespace[23m
+
+[31m✖ [39m[31m1 warning[39m[31m found.
+
+[39m
+real	0m0.451s
+user	0m0.504s
+sys	0m0.053s

@@ -1,0 +1,103 @@
+[4m
+/home/logan/comp5566/Blockchain-and-smart-contract-security/sol_file/BECToken.sol
+[24m[1m  8:2  [22m     [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  8:46  [22m    [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  10:4  [22m    [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  12:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  14:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  14:46  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  19:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  21:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  21:46  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  22:4  [22m    [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  24:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  26:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  26:46  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  28:4  [22m    [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  30:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  39:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  40:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  40:41  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  41:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  42:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  50:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  52:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  59:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  60:4  [22m    [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  61:4  [22m    [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  68:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  75:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  75:44  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  77:0  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  85:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  85:60  [22m   [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  86:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  87:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  88:2  [22m    [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  101:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  110:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  111:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  112:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  113:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  120:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  132:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  136:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  144:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  144:62  [22m  [33mwarning  [39m  Use 'view' instead of deprecated 'constant'.                        [3mno-constant[23m
+[1m  146:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  155:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  158:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  165:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  165:2  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                         [3mconstructor[23m
+[1m  165:2  [22m   [31merror  [39m    No visibility specified explicitly for Ownable function.            [3msecurity/enforce-explicit-visibility[23m
+[1m  167:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  173:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  174:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  176:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  183:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  183:57  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  184:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  185:4  [22m   [33mwarning  [39m  Use emit statements for triggering events.                          [3memit[23m
+[1m  187:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  196:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  197:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  199:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  205:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  206:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  208:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  213:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  214:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  216:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  221:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  221:43  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  223:4  [22m   [33mwarning  [39m  Use emit statements for triggering events.                          [3memit[23m
+[1m  224:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  229:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  229:42  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  231:4  [22m   [33mwarning  [39m  Use emit statements for triggering events.                          [3memit[23m
+[1m  232:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  243:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  245:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  247:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  249:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  251:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  253:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  254:2  [22m   [33mwarning  [39m  Line contains trailing whitespace                                   [3mno-trailing-whitespace[23m
+[1m  255:2  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  258:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  259:4  [22m   [33mwarning  [39m  Provide an error message for require()                              [3merror-reason[23m
+[1m  267:0  [22m   [31merror  [39m    Only use indent of 4 spaces.                                        [3mindentation[23m
+[1m  284:28  [22m  [31merror  [39m    String literal must be quoted with double quotes.                   [3mquotes[23m
+[1m  290:4  [22m   [33mwarning  [39m  Constructor declaration style is deprecated                         [3mconstructor[23m
+[1m  290:4  [22m   [31merror  [39m    No visibility specified explicitly for BecToken function.           [3msecurity/enforce-explicit-visibility[23m
+[1m  291:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                        [3mindentation[23m
+[1m  292:6  [22m   [31merror  [39m    Only use indent of 8 spaces.                                        [3mindentation[23m
+[1m  295:4  [22m   [31merror  [39m    No visibility specified explicitly for fallback function.           [3msecurity/enforce-explicit-visibility[23m
+[1m  297:8  [22m   [33mwarning  [39m  Provide an error message for revert()                               [3merror-reason[23m
+
+[31m✖ [39m[31m62 errors[39m[31m, 32 warnings[39m[31m found.
+
+[39m
+real	0m0.613s
+user	0m0.741s
+sys	0m0.067s
