@@ -12,3 +12,4 @@ Pragma version^0.5.0 (../sol_file/out-of-bounds-exception.sol#1) allows old vers
 solc-0.5.0 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/out-of-bounds-exception.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+Elapsed time: 1 seconds.

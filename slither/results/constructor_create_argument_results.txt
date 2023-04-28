@@ -16,3 +16,4 @@ INFO:Detectors:
 Pragma version^0.4.22 (../sol_file/constructor_create_argument.sol#5) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
 solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/constructor_create_argument.sol analyzed (2 contracts with 85 detectors), 2 result(s) found
+Elapsed time: 1 seconds.

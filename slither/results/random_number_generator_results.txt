@@ -9,3 +9,4 @@ Pragma version^0.4.25 (../sol_file/random_number_generator.sol#1) allows old ver
 solc-0.4.25 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/random_number_generator.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

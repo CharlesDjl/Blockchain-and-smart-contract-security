@@ -3,3 +3,4 @@ Pragma version^0.4.19 (../sol_file/assert_constructor.sol#6) allows old versions
 solc-0.4.19 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/assert_constructor.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+Elapsed time: 0 seconds.

@@ -6,3 +6,4 @@ INFO:Detectors:
 Struct PredictTheBlockHashChallenge.guess (../sol_file/old_blockhash.sol#7-10) is not in CapWords
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/old_blockhash.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+Elapsed time: 1 seconds.

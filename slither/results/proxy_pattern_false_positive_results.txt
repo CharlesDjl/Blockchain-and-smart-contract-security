@@ -23,3 +23,4 @@ INFO:Detectors:
 proxy.owner (../sol_file/proxy_pattern_false_positive.sol#4) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/proxy_pattern_false_positive.sol analyzed (1 contracts with 85 detectors), 9 result(s) found
+Elapsed time: 1 seconds.

@@ -16,3 +16,4 @@ INFO:Detectors:
 Event TimedCrowdsalenotFinished() (../sol_file/timed_crowdsale.sol#6) is not in CapWords
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/timed_crowdsale.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

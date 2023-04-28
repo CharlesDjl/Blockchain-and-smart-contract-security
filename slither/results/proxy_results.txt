@@ -18,3 +18,4 @@ forward(address,bytes) should be declared external:
 	- Proxy.forward(address,bytes) (../sol_file/proxy.sol#11-13)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 INFO:Slither:../sol_file/proxy.sol analyzed (1 contracts with 85 detectors), 6 result(s) found
+Elapsed time: 1 seconds.

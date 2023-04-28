@@ -19,3 +19,4 @@ Base.c (../sol_file/base.sol#10) should be constant
 Base.d (../sol_file/base.sol#11) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/base.sol analyzed (1 contracts with 85 detectors), 9 result(s) found
+Elapsed time: 1 seconds.

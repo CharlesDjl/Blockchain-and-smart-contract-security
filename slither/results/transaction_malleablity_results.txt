@@ -43,3 +43,4 @@ transfer(bytes,address,uint256,uint256,uint256) should be declared external:
 	- transaction_malleablity.transfer(bytes,address,uint256,uint256,uint256) (../sol_file/transaction_malleablity.sol#14-33)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 INFO:Slither:../sol_file/transaction_malleablity.sol analyzed (1 contracts with 85 detectors), 21 result(s) found
+Elapsed time: 1 seconds.

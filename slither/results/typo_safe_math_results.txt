@@ -17,3 +17,4 @@ Pragma version^0.4.25 (../sol_file/typo_safe_math.sol#1) allows old versions
 solc-0.4.25 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/typo_safe_math.sol analyzed (2 contracts with 85 detectors), 7 result(s) found
+Elapsed time: 1 seconds.

@@ -113,3 +113,4 @@ initWallet(address[],uint256,uint256) should be declared external:
 	- WalletLibrary.initWallet(address[],uint256,uint256) ()
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 INFO:Slither:../sol_file/WalletLibrary.sol analyzed (3 contracts with 85 detectors), 58 result(s) found
+Elapsed time: 1 seconds.

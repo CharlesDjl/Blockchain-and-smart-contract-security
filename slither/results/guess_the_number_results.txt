@@ -29,3 +29,4 @@ Reentrancy in GuessTheNumber.checkAndTransferPrize(uint256,uint256,address) (../
 	- success(You guessed the correct number!) (../sol_file/guess_the_number.sol#40)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
 INFO:Slither:../sol_file/guess_the_number.sol analyzed (1 contracts with 85 detectors), 10 result(s) found
+Elapsed time: 1 seconds.

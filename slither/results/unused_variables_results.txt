@@ -20,3 +20,4 @@ INFO:Detectors:
 UnusedVariables.a (../sol_file/unused_variables.sol#4) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/unused_variables.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+Elapsed time: 1 seconds.

@@ -31,3 +31,4 @@ Variable Lockdrop.LOCK_START_TIME (../sol_file/Lockdrop.sol#40) is not in mixedC
 Variable Lockdrop.LOCK_END_TIME (../sol_file/Lockdrop.sol#41) is not in mixedCase
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/Lockdrop.sol analyzed (2 contracts with 85 detectors), 11 result(s) found
+Elapsed time: 1 seconds.

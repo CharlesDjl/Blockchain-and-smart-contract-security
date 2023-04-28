@@ -58,3 +58,4 @@ INFO:Detectors:
 CryptoRoulette.betPrice (../sol_file/crypto_roulette.sol#17) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/crypto_roulette.sol analyzed (1 contracts with 85 detectors), 12 result(s) found
+Elapsed time: 1 seconds.

@@ -23,3 +23,4 @@ INFO:Detectors:
 ModifierEntrancy.name (../sol_file/modifier_reentrancy.sol#6) is never used in ModifierEntrancy (../sol_file/modifier_reentrancy.sol#3-29)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
 INFO:Slither:../sol_file/modifier_reentrancy.sol analyzed (2 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

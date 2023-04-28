@@ -17,3 +17,4 @@ Function Wallet.UpdateBonusCodeAt(uint256,uint256) (../sol_file/arbitrary_locati
 Function Wallet.Destroy() (../sol_file/arbitrary_location_write_simple.sol#29-32) is not in mixedCase
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/arbitrary_location_write_simple.sol analyzed (1 contracts with 85 detectors), 8 result(s) found
+Elapsed time: 1 seconds.

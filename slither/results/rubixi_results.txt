@@ -160,3 +160,4 @@ Reentrancy in Rubixi.collectPercentOfFees(uint256) (../sol_file/rubixi.sol#91-97
 	- collectedFees -= feesToCollect (../sol_file/rubixi.sol#96)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
 INFO:Slither:../sol_file/rubixi.sol analyzed (1 contracts with 85 detectors), 31 result(s) found
+Elapsed time: 1 seconds.

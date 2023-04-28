@@ -11,3 +11,4 @@ Parameter TimeLock.lockEth(uint256,uint256)._time (../sol_file/time_lock.sol#16)
 Parameter TimeLock.lockEth(uint256,uint256)._amount (../sol_file/time_lock.sol#16) is not in mixedCase
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/time_lock.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+Elapsed time: 1 seconds.

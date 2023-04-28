@@ -14,3 +14,4 @@ INFO:Detectors:
 Map.owner (../sol_file/mapping_write.sol#6) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/mapping_write.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+Elapsed time: 0 seconds.

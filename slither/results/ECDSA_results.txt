@@ -11,3 +11,4 @@ Pragma version^0.5.0 (../sol_file/ECDSA.sol#3) allows old versions
 solc-0.5.0 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/ECDSA.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+Elapsed time: 1 seconds.

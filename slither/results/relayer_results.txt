@@ -32,3 +32,4 @@ Moreover, the following function parameters should change its data location:
 _data location should be calldata
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 INFO:Slither:../sol_file/relayer.sol analyzed (2 contracts with 85 detectors), 7 result(s) found
+Elapsed time: 1 seconds.

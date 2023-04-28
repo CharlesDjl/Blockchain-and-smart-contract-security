@@ -3,3 +3,4 @@ Pragma version^0.4.19 (../sol_file/integer_overflow_minimal.sol#4) allows old ve
 solc-0.4.19 is not recommended for deployment
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/integer_overflow_minimal.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+Elapsed time: 1 seconds.

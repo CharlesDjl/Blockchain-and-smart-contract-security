@@ -19,3 +19,4 @@ Reentrancy in EthTxOrderDependenceMinimal.setReward() (../sol_file/eth_tx_order_
 	- reward = msg.value (../sol_file/eth_tx_order_dependence_minimal.sol#22)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
 INFO:Slither:../sol_file/eth_tx_order_dependence_minimal.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+Elapsed time: 1 seconds.

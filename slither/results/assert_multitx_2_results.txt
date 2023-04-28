@@ -23,3 +23,4 @@ INFO:Detectors:
 Parameter AssertMultiTx2.set(uint256)._param (../sol_file/assert_multitx_2.sol#19) is not in mixedCase
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/assert_multitx_2.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+Elapsed time: 1 seconds.

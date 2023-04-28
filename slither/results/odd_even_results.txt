@@ -24,3 +24,4 @@ Low level call in OddEven.selectWinner() (../sol_file/odd_even.sol#25-31):
 	- (success) = players[n % 2].addr.call.value(address(this).balance)() (../sol_file/odd_even.sol#27)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:../sol_file/odd_even.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+Elapsed time: 1 seconds.

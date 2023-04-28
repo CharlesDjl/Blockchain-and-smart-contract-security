@@ -22,3 +22,4 @@ INFO:Detectors:
 Function HashForEther._sendWinnings() (../sol_file/visibility_not_set.sol#17-19) is not in mixedCase
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 INFO:Slither:../sol_file/visibility_not_set.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

@@ -13,3 +13,4 @@ INFO:Detectors:
 Pragma version^0.4.22 (../sol_file/sha_of_sha_collision.sol#8) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
 solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 INFO:Slither:../sol_file/sha_of_sha_collision.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+Elapsed time: 1 seconds.

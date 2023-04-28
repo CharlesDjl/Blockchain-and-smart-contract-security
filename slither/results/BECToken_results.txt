@@ -42,3 +42,4 @@ batchTransfer(address[],uint256) should be declared external:
 	- PausableToken.batchTransfer(address[],uint256) (../sol_file/BECToken.sol#255-267)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
 INFO:Slither:../sol_file/BECToken.sol analyzed (9 contracts with 85 detectors), 29 result(s) found
+Elapsed time: 2 seconds.

@@ -98,3 +98,4 @@ Low level call in DeprecatedSimple.useDeprecated() (../sol_file/deprecated_simpl
 	- address(this).callcode() (../sol_file/deprecated_simple.sol#18)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
 INFO:Slither:../sol_file/deprecated_simple.sol analyzed (1 contracts with 85 detectors), 12 result(s) found
+Elapsed time: 1 seconds.

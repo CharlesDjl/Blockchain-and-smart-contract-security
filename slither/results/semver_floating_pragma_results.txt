@@ -91,3 +91,4 @@ pragma solidity ~0.4.20;
 ^----------------------^
 
 
+Elapsed time: 1 seconds.

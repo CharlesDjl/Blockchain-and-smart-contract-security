@@ -41,3 +41,4 @@ INFO:Detectors:
 The function DerivedA.ret() (../sol_file/unused_state_variables.sol#20-23) reads this.e() (../sol_file/unused_state_variables.sol#21) with `this` which adds an extra STATICCALL.
 Reference: https://github.com/crytic/slither/wiki/Vulnerabilities-Description#public-variable-read-in-external-context
 INFO:Slither:../sol_file/unused_state_variables.sol analyzed (2 contracts with 85 detectors), 12 result(s) found
+Elapsed time: 1 seconds.

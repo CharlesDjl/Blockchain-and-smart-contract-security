@@ -17,3 +17,4 @@ INFO:Detectors:
 SuicideMultiTxFeasible.count (../sol_file/suicide_multitx_infeasible.sol#5) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/suicide_multitx_infeasible.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

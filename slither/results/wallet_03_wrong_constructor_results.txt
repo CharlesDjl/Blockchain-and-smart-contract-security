@@ -19,3 +19,4 @@ Reentrancy in Wallet.withdraw(uint256) (../sol_file/wallet_03_wrong_constructor.
 	- balances[msg.sender] -= amount (../sol_file/wallet_03_wrong_constructor.sol#24)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
 INFO:Slither:../sol_file/wallet_03_wrong_constructor.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+Elapsed time: 1 seconds.

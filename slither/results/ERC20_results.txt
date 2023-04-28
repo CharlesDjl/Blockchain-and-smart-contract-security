@@ -19,3 +19,4 @@ INFO:Detectors:
 ERC20._totalSupply (../sol_file/ERC20.sol#78) should be constant 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
 INFO:Slither:../sol_file/ERC20.sol analyzed (2 contracts with 85 detectors), 7 result(s) found
+Elapsed time: 1 seconds.

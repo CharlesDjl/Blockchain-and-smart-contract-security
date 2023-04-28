@@ -64,3 +64,4 @@ MDTCrowdsale.MDTCrowdsale() (../sol_file/MDTCrowdsale.sol#527-533) uses literals
 	- Crowdsale(block.number,block.number + 100000,1,msg.sender) (../sol_file/MDTCrowdsale.sol#529)
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#too-many-digits
 INFO:Slither:../sol_file/MDTCrowdsale.sol analyzed (10 contracts with 85 detectors), 11 result(s) found
+Elapsed time: 2 seconds.
