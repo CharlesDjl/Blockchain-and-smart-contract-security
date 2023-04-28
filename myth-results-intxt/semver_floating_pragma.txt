@@ -1,7 +1,0 @@
-mythril.interfaces.cli [ERROR]: Solc experienced a fatal error.
-
-semver_floating_pragma.sol:5:1: ParserError: Source file requires different compiler version (current compiler is 0.5.16+commit.9c3226ce.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
-pragma solidity 0.4.24 - 0.5.2;
-^-----------------------------^
-
-SolidityVersionMismatch: Try adding the option "--solv <version_number>"
