@@ -1,0 +1,196 @@
+Running time: 9.285445382 seconds
+
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        15
+Source: 
+> 
+>     function lock(uint wad) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         deposits[msg.sender] = add(deposits[msg.sender], wad);
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        20
+Source: 
+> 
+>     function free(uint wad) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         deposits[msg.sender] = sub(deposits[msg.sender], wad);
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        25
+Source: 
+> 
+>     function voteYays(address yay) public returns (bytes32){
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 slate = etch(yay);
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        65
+Source: 
+> 
+>    function checkAnInvariant() public {
+>    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 senderSlate = votes[msg.sender];
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        15
+Source: 
+> 
+>     function lock(uint wad) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         deposits[msg.sender] = add(deposits[msg.sender], wad);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        20
+Source: 
+> 
+>     function free(uint wad) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         deposits[msg.sender] = sub(deposits[msg.sender], wad);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        25
+Source: 
+> 
+>     function voteYays(address yay) public returns (bytes32){
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 slate = etch(yay);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        32
+Source: 
+> 
+>     function etch(address yay) public returns (bytes32 slate) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 hash = keccak256(abi.encodePacked(yay));
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        40
+Source: 
+> 
+>     function voteSlate(bytes32 slate) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         uint weight = deposits[msg.sender];
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Uninitialized Local Variables
+Description: A variable is declared but never initialized.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        58
+Source: 
+>     function add(uint x, uint y) internal pure returns (uint z) {
+>         require((z = x + y) >= x);
+>                  ^
+>     }
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Uninitialized Local Variables
+Description: A variable is declared but never initialized.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        62
+Source: 
+>     function sub(uint x, uint y) internal pure returns (uint z) {
+>         require((z = x - y) <= x);
+>                  ^
+>     }
+
+[0m
+[0;33mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Warning
+Contract:    SimpleDSChief
+Line:        49
+Source: 
+>         address yay = slates[slate];
+>         approvals[yay] = add(approvals[yay], weight);
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     }
+
+[0m
+[0;33mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Warning
+Contract:    SimpleDSChief
+Line:        54
+Source: 
+>         address yay = slates[slate];
+>         approvals[yay] = sub(approvals[yay], weight);
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    SimpleDSChief
+Line:        35
+Source: 
+> 
+>         slates[hash] = yay;
+>         ^^^^^^^^^^^^^^^^^^
+> 
+
+[0m

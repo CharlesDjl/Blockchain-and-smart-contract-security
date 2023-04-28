@@ -1,0 +1,114 @@
+Running time: 5.632300600 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    ReturnMemory
+Line:        23
+Source: 
+> 
+>     function etch(address yay) public returns (bytes32 slate) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 hash = keccak256(abi.encodePacked(yay));
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    ReturnMemory
+Line:        29
+Source: 
+> 
+>     function lookup(bytes32 slate, address nay) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>        if (nay != address(0x0)) {
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    ReturnMemory
+Line:        35
+Source: 
+>     
+>     function checkAnInvariant() public returns (bool) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         assert(!everMatched);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    ReturnMemory
+Line:        23
+Source: 
+> 
+>     function etch(address yay) public returns (bytes32 slate) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         bytes32 hash = keccak256(abi.encodePacked(yay));
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    ReturnMemory
+Line:        29
+Source: 
+> 
+>     function lookup(bytes32 slate, address nay) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>        if (nay != address(0x0)) {
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    ReturnMemory
+Line:        21
+Source: 
+>     mapping(bytes32=>address) public slates;
+>     bool everMatched = false;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    ReturnMemory
+Line:        25
+Source: 
+>         bytes32 hash = keccak256(abi.encodePacked(yay));
+>         slates[hash] = yay;
+>         ^^^^^^^^^^^^^^^^^^
+>         return hash;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    ReturnMemory
+Line:        31
+Source: 
+>        if (nay != address(0x0)) {
+>          everMatched = slates[slate] == nay;
+>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>        }
+
+[0m

@@ -1,0 +1,235 @@
+Running time: 13.157543358 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    INFO
+Pattern:     Assembly Usage
+Description: Usage of assembly in Solidity code is discouraged.
+Type:        Violation
+Contract:    Lock
+Line:        11
+Source: 
+>     constructor (address owner, uint256 unlockTime) public payable {
+>         assembly {
+>         ^^^^^^^^^^
+>             sstore(0x00, owner)
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Assembly Usage
+Description: Usage of assembly in Solidity code is discouraged.
+Type:        Violation
+Contract:    Lock
+Line:        21
+Source: 
+>     function () external payable { // payable so solidity doesn't add unnecessary logic
+>         assembly {
+>         ^^^^^^^^^^
+>             switch gt(timestamp, sload(0x01))
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Dangerous Strict Equalities
+Description: Strict equalities that use account's balance, timestamps
+             and block numbers should be avoided
+Type:        Violation
+Contract:    Lockdrop
+Line:        69
+Source: 
+>         // ensure lock contract has all ETH, or fail
+>         assert(address(lockAddr).balance == msg.value);
+>                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         emit Locked(owner, eth, lockAddr, term, edgewareAddr, isValidator, now);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Dangerous Strict Equalities
+Description: Strict equalities that use account's balance, timestamps
+             and block numbers should be avoided
+Type:        Violation
+Contract:    Lockdrop
+Line:        137
+Source: 
+>         } else {
+>             require(target == addressFrom(parent, nonce));
+>                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             _;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Dangerous Strict Equalities
+Description: Strict equalities that use account's balance, timestamps
+             and block numbers should be avoided
+Type:        Violation
+Contract:    Lockdrop
+Line:        118
+Source: 
+>     function addressFrom(address _origin, uint32 _nonce) public pure returns (address) {
+>         if(_nonce == 0x00)     return address(uint160(uint256(keccak256(abi.encodePacked(byte(0xd6), byte(0x94), _origin, byte(0x80))))));
+>            ^^^^^^^^^^^^^^
+>         if(_nonce <= 0x7f)     return address(uint160(uint256(keccak256(abi.encodePacked(byte(0xd6), byte(0x94), _origin, uint8(_nonce))))));
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Locked Ether
+Description: Contracts that may receive ether must also allow users to
+             extract the deposited ether from the contract.
+Type:        Violation
+Contract:    Lock
+Line:        7
+Source: 
+> 
+> contract Lock {
+> ^^^^^^^^^^^^^^^
+>     // address owner; slot #0
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Locked Ether
+Description: Contracts that may receive ether must also allow users to
+             extract the deposited ether from the contract.
+Type:        Violation
+Contract:    Lockdrop
+Line:        32
+Source: 
+> 
+> contract Lockdrop {
+> ^^^^^^^^^^^^^^^^^^^
+>     enum Term {
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Low Level Calls
+Description: Usage of <address>.call should be avoided
+Type:        Violation
+Contract:    Lockdrop
+Line:        67
+Source: 
+>         // Create ETH lock contract
+>         Lock lockAddr = (new Lock).value(eth)(owner, unlockTime);
+>                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         // ensure lock contract has all ETH, or fail
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Lockdrop
+Line:        57
+Source: 
+>      */
+>     function lock(Term term, bytes calldata edgewareAddr, bool isValidator)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         external
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Lockdrop
+Line:        79
+Source: 
+>      */
+>     function signal(address contractAddr, uint32 nonce, bytes calldata edgewareAddr)
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         external
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Lockdrop
+Line:        117
+Source: 
+>      */
+>     function addressFrom(address _origin, uint32 _nonce) public pure returns (address) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         if(_nonce == 0x00)     return address(uint160(uint256(keccak256(abi.encodePacked(byte(0xd6), byte(0x94), _origin, byte(0x80))))));
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    Lockdrop
+Line:        40
+Source: 
+>     uint256 constant public LOCK_DROP_PERIOD = 1 days * 92; // 3 months
+>     uint256 public LOCK_START_TIME;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     uint256 public LOCK_END_TIME;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    Lockdrop
+Line:        41
+Source: 
+>     uint256 public LOCK_START_TIME;
+>     uint256 public LOCK_END_TIME;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     // ETH locking events
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Lockdrop
+Line:        132
+Source: 
+>      */
+>     modifier didCreate(address target, address parent, uint32 nonce) {
+>                        ^^^^^^^^^^^^^^
+>         // Trivially let senders "create" themselves
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Lockdrop
+Line:        132
+Source: 
+>      */
+>     modifier didCreate(address target, address parent, uint32 nonce) {
+>                                        ^^^^^^^^^^^^^^
+>         // Trivially let senders "create" themselves
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Lockdrop
+Line:        132
+Source: 
+>      */
+>     modifier didCreate(address target, address parent, uint32 nonce) {
+>                                                        ^^^^^^^^^^^^
+>         // Trivially let senders "create" themselves
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Unused Return Pattern
+Description: The value returned by an external function call is never
+             used
+Type:        Violation
+Contract:    Lockdrop
+Line:        67
+Source: 
+>         // Create ETH lock contract
+>         Lock lockAddr = (new Lock).value(eth)(owner, unlockTime);
+>                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         // ensure lock contract has all ETH, or fail
+
+[0m

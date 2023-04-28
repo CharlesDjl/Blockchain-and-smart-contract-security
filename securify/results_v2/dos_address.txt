@@ -1,0 +1,127 @@
+Running time: 6.184779088 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosGas
+Line:        8
+Source: 
+> 
+>     function emptyCreditors() public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         if(creditorAddresses.length>1500) {
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosGas
+Line:        15
+Source: 
+> 
+>     function addCreditors() public returns (bool) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         for(uint i=0;i<350;i++) {
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosGas
+Line:        22
+Source: 
+> 
+>     function iWin() public view returns (bool) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return win;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosGas
+Line:        26
+Source: 
+> 
+>     function numberCreditors() public view returns (uint) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return creditorAddresses.length;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    DosGas
+Line:        5
+Source: 
+> 
+>     address[] creditorAddresses;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     bool win = false;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    DosGas
+Line:        6
+Source: 
+>     address[] creditorAddresses;
+>     bool win = false;
+>     ^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosGas
+Line:        10
+Source: 
+>         if(creditorAddresses.length>1500) {
+>             creditorAddresses = new address[](0);
+>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             win = true;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosGas
+Line:        11
+Source: 
+>             creditorAddresses = new address[](0);
+>             win = true;
+>             ^^^^^^^^^^
+>         }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosGas
+Line:        17
+Source: 
+>         for(uint i=0;i<350;i++) {
+>           creditorAddresses.push(msg.sender);
+>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         }
+
+[0m

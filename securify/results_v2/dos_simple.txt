@@ -1,0 +1,58 @@
+Running time: 5.719974392 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosOneFunc
+Line:        7
+Source: 
+> 
+>     function ifillArray() public returns (bool){
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         if(listAddresses.length<1500) {
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    DosOneFunc
+Line:        5
+Source: 
+> 
+>     address[] listAddresses;
+>     ^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosOneFunc
+Line:        11
+Source: 
+>             for(uint i=0;i<350;i++) {
+>                 listAddresses.push(msg.sender);
+>                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosOneFunc
+Line:        16
+Source: 
+>         } else {
+>             listAddresses = new address[](0);
+>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             return false;
+
+[0m

@@ -1,0 +1,114 @@
+Running time: 6.266025832 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    UnusedVariables
+Line:        4
+Source: 
+> contract UnusedVariables {
+>     int a = 1;
+>     ^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    UnusedVariables
+Line:        7
+Source: 
+>     // y is not used
+>     function unusedArg(int x, int y) public view returns (int z) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         z = x + a;  
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    UnusedVariables
+Line:        18
+Source: 
+>     // x is not accessed 
+>     function neverAccessed(int test) public pure returns (int) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         int z = 10;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    UnusedVariables
+Line:        31
+Source: 
+>     
+>     function tupleAssignment(int p) public returns (int q, int r){
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         (q, , r) = unusedReturn(p,2);
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    UnusedVariables
+Line:        7
+Source: 
+>     // y is not used
+>     function unusedArg(int x, int y) public view returns (int z) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         z = x + a;  
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    UnusedVariables
+Line:        12
+Source: 
+>     // n is not reported it is part of another SWC category
+>     function unusedReturn(int x, int y) public pure returns (int m, int n, int o) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         m = y - x;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    UnusedVariables
+Line:        31
+Source: 
+>     
+>     function tupleAssignment(int p) public returns (int q, int r){
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         (q, , r) = unusedReturn(p,2);
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    UnusedVariables
+Line:        4
+Source: 
+> contract UnusedVariables {
+>     int a = 1;
+>     ^^^^^^^^^
+> 
+
+[0m

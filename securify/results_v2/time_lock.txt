@@ -1,0 +1,143 @@
+Running time: 6.611269188 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    TimeLock
+Line:        16
+Source: 
+>     // Tokens should be locked for exact time specified
+>     function lockEth(uint _time, uint _amount) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(msg.value == _amount, 'must send exact amount');
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    TimeLock
+Line:        23
+Source: 
+>     // Withdraw tokens if lock period is over
+>     function withdraw() public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(users[msg.sender].amount > 0, 'no amount locked');
+
+[0m
+[0;33mSeverity:    CRITICAL
+Pattern:     Gas-dependent Reentrancy
+Description: Calls into external contracts that receive all remaining
+             gas and are followed by state changes may be reentrant.
+Type:        Warning
+Contract:    TimeLock
+Line:        29
+Source: 
+>         users[msg.sender].amount = 0;
+>         (bool success, ) = msg.sender.call.value(amount)("");
+>                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Low Level Calls
+Description: Usage of <address>.call should be avoided
+Type:        Violation
+Contract:    TimeLock
+Line:        29
+Source: 
+>         users[msg.sender].amount = 0;
+>         (bool success, ) = msg.sender.call.value(amount)("");
+>                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    TimeLock
+Line:        16
+Source: 
+>     // Tokens should be locked for exact time specified
+>     function lockEth(uint _time, uint _amount) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(msg.value == _amount, 'must send exact amount');
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    TimeLock
+Line:        29
+Source: 
+>         users[msg.sender].amount = 0;
+>         (bool success, ) = msg.sender.call.value(amount)("");
+>          ^^^^^^^^^^^^
+>         require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Transaction Order Affects Ether Amount
+Description: The amount of ether transferred must not be influenced by
+             other transactions.
+Type:        Violation
+Contract:    TimeLock
+Line:        29
+Source: 
+>         users[msg.sender].amount = 0;
+>         (bool success, ) = msg.sender.call.value(amount)("");
+>                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Transaction Order Affects Execution of Ether Transfer
+Description: Ether transfers whose execution can be manipulated by
+             other transactions must be inspected for unintended
+             behavior.
+Type:        Violation
+Contract:    TimeLock
+Line:        29
+Source: 
+>         users[msg.sender].amount = 0;
+>         (bool success, ) = msg.sender.call.value(amount)("");
+>                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    TimeLock
+Line:        18
+Source: 
+>         require(msg.value == _amount, 'must send exact amount');
+>         users[msg.sender].unlockBlock = block.number + (_time / 14);
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         users[msg.sender].amount = _amount;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    TimeLock
+Line:        19
+Source: 
+>         users[msg.sender].unlockBlock = block.number + (_time / 14);
+>         users[msg.sender].amount = _amount;
+>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     }
+
+[0m

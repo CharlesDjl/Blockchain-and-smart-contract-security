@@ -1,0 +1,97 @@
+Running time: 5.804827218 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        14
+Source: 
+>   //If a contract has a zero balance and supports the token give them some token
+>   function airDrop() hasNoBalance supportsToken  public{
+>   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     tokenBalance[msg.sender] += 20;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     No-Ether-Involved Reentrancy
+Description: Reentrancy that involves no ether
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        20
+Source: 
+>   modifier supportsToken() {
+>     require(keccak256(abi.encodePacked("Nu Token")) == bank.supportsToken());
+>                                                        ^^^^^^^^^^^^^^^^^^^^
+>     _;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        6
+Source: 
+>   mapping (address => uint) public tokenBalance;
+>   string constant name = "Nu Token";
+>   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>   Bank bank;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        6
+Source: 
+>   mapping (address => uint) public tokenBalance;
+>   string constant name = "Nu Token";
+>   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>   Bank bank;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        7
+Source: 
+>   string constant name = "Nu Token";
+>   Bank bank;
+>   ^^^^^^^^^
+>   
+
+[0m
+[0;33mSeverity:    HIGH
+Pattern:     Unhandled Exception
+Description: The return value of statements that may return error
+             values must be explicitly checked.
+Type:        Warning
+Contract:    ModifierEntrancy
+Line:        20
+Source: 
+>   modifier supportsToken() {
+>     require(keccak256(abi.encodePacked("Nu Token")) == bank.supportsToken());
+>                                                        ^^^^^^^^^^^^^^^^^^^^
+>     _;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    ModifierEntrancy
+Line:        6
+Source: 
+>   mapping (address => uint) public tokenBalance;
+>   string constant name = "Nu Token";
+>   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>   Bank bank;
+
+[0m

@@ -1,0 +1,29 @@
+Running time: 6.175490591 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    INFO
+Pattern:     Assembly Usage
+Description: Usage of assembly in Solidity code is discouraged.
+Type:        Violation
+Contract:    ECDSA
+Line:        44
+Source: 
+>         // solhint-disable-next-line no-inline-assembly
+>         assembly {
+>         ^^^^^^^^^^
+>             r := mload(add(signature, 0x20))
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Uninitialized Local Variables
+Description: A variable is declared but never initialized.
+Type:        Violation
+Contract:    ECDSA
+Line:        59
+Source: 
+>         // these malleable signatures as well.
+>         if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) {
+>                        ^
+>             return address(0);
+
+[0m

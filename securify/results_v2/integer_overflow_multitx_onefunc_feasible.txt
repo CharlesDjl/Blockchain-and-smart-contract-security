@@ -1,0 +1,59 @@
+Running time: 5.106310006 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    IntegerOverflowMultiTxOneFuncFeasible
+Line:        15
+Source: 
+> 
+>     function run(uint256 input) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         if (initialized == 0) {
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    IntegerOverflowMultiTxOneFuncFeasible
+Line:        15
+Source: 
+> 
+>     function run(uint256 input) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         if (initialized == 0) {
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    IntegerOverflowMultiTxOneFuncFeasible
+Line:        17
+Source: 
+>         if (initialized == 0) {
+>             initialized = 1;
+>             ^^^^^^^^^^^^^^^
+>             return;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    IntegerOverflowMultiTxOneFuncFeasible
+Line:        21
+Source: 
+> 
+>         count -= input;
+>         ^^^^^^^^^^^^^^
+>     }
+
+[0m

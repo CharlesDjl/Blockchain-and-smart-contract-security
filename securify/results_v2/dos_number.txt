@@ -1,0 +1,197 @@
+Running time: 6.080917008 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosNumber
+Line:        8
+Source: 
+> 
+>     function insertNnumbers(uint value,uint numbers) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosNumber
+Line:        19
+Source: 
+> 
+>     function clear() public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(numElements>1500);
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosNumber
+Line:        25
+Source: 
+>     // Gas DOS clear
+>     function clearDOS() public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosNumber
+Line:        33
+Source: 
+> 
+>     function getLengthArray() public view returns(uint) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return numElements;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    DosNumber
+Line:        37
+Source: 
+> 
+>     function getRealLengthArray() public view returns(uint) {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         return array.length;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    DosNumber
+Line:        8
+Source: 
+> 
+>     function insertNnumbers(uint value,uint numbers) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    DosNumber
+Line:        5
+Source: 
+> 
+>     uint numElements = 0;
+>     ^^^^^^^^^^^^^^^^^^^^
+>     uint[] array;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    DosNumber
+Line:        6
+Source: 
+>     uint numElements = 0;
+>     uint[] array;
+>     ^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        13
+Source: 
+>             if(numElements == array.length) {
+>                 array.length += 1;
+>                 ^^^^^^^^^^^^^^^^^
+>             }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        15
+Source: 
+>             }
+>             array[numElements++] = value;
+>                   ^^^^^^^^^^^^^
+>         }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        15
+Source: 
+>             }
+>             array[numElements++] = value;
+>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        21
+Source: 
+>         require(numElements>1500);
+>         numElements = 0;
+>         ^^^^^^^^^^^^^^^
+>     }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        29
+Source: 
+>         require(numElements>1500);
+>         array = new uint[](0);
+>         ^^^^^^^^^^^^^^^^^^^^^
+>         numElements = 0;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    DosNumber
+Line:        30
+Source: 
+>         array = new uint[](0);
+>         numElements = 0;
+>         ^^^^^^^^^^^^^^^
+>     }
+
+[0m

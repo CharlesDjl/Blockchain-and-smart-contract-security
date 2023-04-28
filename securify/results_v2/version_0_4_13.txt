@@ -1,0 +1,30 @@
+Running time: 4.798836857 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    OutdatedCompilerVersion
+Line:        4
+Source: 
+> contract OutdatedCompilerVersion {
+>     uint public x = 1;
+>     ^^^^^^^^^^^^^^^^^
+> }
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    OutdatedCompilerVersion
+Line:        4
+Source: 
+> contract OutdatedCompilerVersion {
+>     uint public x = 1;
+>     ^^^^^^^^^^^^^^^^^
+> }
+
+[0m

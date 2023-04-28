@@ -1,0 +1,298 @@
+Running time: 5.359129803 seconds
+
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    Base
+Line:        6
+Source: 
+>     // a and b are public and can be accessed through an external call
+>     int public a = 10;
+>     ^^^^^^^^^^^^^^^^^
+>     int public b;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    Base
+Line:        7
+Source: 
+>     int public a = 10;
+>     int public b;
+>     ^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    Base
+Line:        10
+Source: 
+>     // c and d are not used in current contract or descendant contract
+>     int internal c;
+>     ^^^^^^^^^^^^^^
+>     int private d;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    Base
+Line:        11
+Source: 
+>     int internal c;
+>     int private d;
+>     ^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Base
+Line:        24
+Source: 
+>     
+>     function assign1(int x) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         e += x;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Base
+Line:        28
+Source: 
+> 
+>     function assign2(uint x,uint y) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         f[x] = y;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Base
+Line:        24
+Source: 
+>     
+>     function assign1(int x) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         e += x;
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    Base
+Line:        28
+Source: 
+> 
+>     function assign2(uint x,uint y) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         f[x] = y;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     Solidity pragma directives
+Description: Avoid complex solidity version pragma statements.
+Type:        Violation
+Contract:    None
+Line:        1
+Source: 
+> pragma solidity >=0.5.0;
+> ^^^^^^^^^^^^^^^^^^^^^^^^
+> pragma experimental ABIEncoderV2;
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Base
+Line:        17
+Source: 
+>     // f can never be accessed 
+>     mapping (uint => uint) f;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^
+>     
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Base
+Line:        20
+Source: 
+>     // g is assigned per default and is accessed in descendant contract
+>     uint[] g=[1,2,3];
+>     ^^^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Uninitialized State Variable
+Description: State variables should be explicitly initialized.
+Type:        Violation
+Contract:    Base
+Line:        7
+Source: 
+>     int public a = 10;
+>     int public b;
+>     ^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Uninitialized State Variable
+Description: State variables should be explicitly initialized.
+Type:        Violation
+Contract:    Base
+Line:        10
+Source: 
+>     // c and d are not used in current contract or descendant contract
+>     int internal c;
+>     ^^^^^^^^^^^^^^
+>     int private d;
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Uninitialized State Variable
+Description: State variables should be explicitly initialized.
+Type:        Violation
+Contract:    Base
+Line:        11
+Source: 
+>     int internal c;
+>     int private d;
+>     ^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Uninitialized State Variable
+Description: State variables should be explicitly initialized.
+Type:        Violation
+Contract:    Base
+Line:        14
+Source: 
+>     // e is assigned and accessed in assign1
+>     int public e;
+>     ^^^^^^^^^^^^
+>     
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Base
+Line:        25
+Source: 
+>     function assign1(int x) public {
+>         e += x;
+>         ^^^^^^
+>     }
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    Base
+Line:        29
+Source: 
+>     function assign2(uint x,uint y) public {
+>         f[x] = y;
+>         ^^^^^^^^
+>     }
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Base
+Line:        6
+Source: 
+>     // a and b are public and can be accessed through an external call
+>     int public a = 10;
+>     ^^^^^^^^^^^^^^^^^
+>     int public b;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Base
+Line:        7
+Source: 
+>     int public a = 10;
+>     int public b;
+>     ^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Base
+Line:        10
+Source: 
+>     // c and d are not used in current contract or descendant contract
+>     int internal c;
+>     ^^^^^^^^^^^^^^
+>     int private d;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Base
+Line:        11
+Source: 
+>     int internal c;
+>     int private d;
+>     ^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Unused State Variable
+Description: Unused state variables should be removed.
+Type:        Violation
+Contract:    Base
+Line:        20
+Source: 
+>     // g is assigned per default and is accessed in descendant contract
+>     uint[] g=[1,2,3];
+>     ^^^^^^^^^^^^^^^^
+> 
+
+[0m

@@ -1,0 +1,225 @@
+Running time: 6.525392110 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    INFO
+Pattern:     Constable State Variables
+Description: State variables that do not change should be declared as
+             constants.
+Type:        Violation
+Contract:    OddEven
+Line:        15
+Source: 
+> 
+>     Player[2] private players;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^
+>     uint count = 0;
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    OddEven
+Line:        18
+Source: 
+> 
+>     function play(uint number) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(msg.value == 1 ether, 'msg.value must be 1 eth');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Gas-dependent Reentrancy
+Description: Calls into external contracts that receive all remaining
+             gas and are followed by state changes may be reentrant.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Low Level Calls
+Description: Usage of <address>.call should be avoided
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Missing Input Validation
+Description: Method arguments must be sanitized before they are used
+             in computations.
+Type:        Violation
+Contract:    OddEven
+Line:        18
+Source: 
+> 
+>     function play(uint number) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(msg.value == 1 ether, 'msg.value must be 1 eth');
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     Solidity Naming Convention
+Description: Reports declarations that do not adhere to Solidity's
+             naming convention.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>              ^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    OddEven
+Line:        16
+Source: 
+>     Player[2] private players;
+>     uint count = 0;
+>     ^^^^^^^^^^^^^^
+> 
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Transaction Order Affects Ether Amount
+Description: The amount of ether transferred must not be influenced by
+             other transactions.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Transaction Order Affects Ether Receiver
+Description: The receiver of ether transfers must not be influenced by
+             other transactions.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Transaction Order Affects Execution of Ether Transfer
+Description: Ether transfers whose execution can be manipulated by
+             other transactions must be inspected for unintended
+             behavior.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    HIGH
+Pattern:     Uninitialized State Variable
+Description: State variables should be explicitly initialized.
+Type:        Violation
+Contract:    OddEven
+Line:        15
+Source: 
+> 
+>     Player[2] private players;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^
+>     uint count = 0;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted Ether Flow
+Description: The execution of ether flows should be restricted to an
+             authorized set of users.
+Type:        Violation
+Contract:    OddEven
+Line:        27
+Source: 
+>             uint n = players[0].number + players[1].number;
+>             (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+>                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             require(success, 'transfer failed');
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    OddEven
+Line:        20
+Source: 
+>             require(msg.value == 1 ether, 'msg.value must be 1 eth');
+>             players[count] = Player(msg.sender, number);
+>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>             count++;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    OddEven
+Line:        21
+Source: 
+>             players[count] = Player(msg.sender, number);
+>             count++;
+>             ^^^^^^^
+>             if (count == 2) selectWinner();
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    OddEven
+Line:        29
+Source: 
+>             require(success, 'transfer failed');
+>             delete players;
+>             ^^^^^^^^^^^^^^
+>             count = 0;
+
+[0m
+[0;31mSeverity:    CRITICAL
+Pattern:     Unrestricted write to storage
+Description: Contract fields that can be modified by any user must be
+             inspected.
+Type:        Violation
+Contract:    OddEven
+Line:        30
+Source: 
+>             delete players;
+>             count = 0;
+>             ^^^^^^^^^
+>     }
+
+[0m

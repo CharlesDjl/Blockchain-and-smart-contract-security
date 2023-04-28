@@ -1,0 +1,58 @@
+Running time: 6.016311972 seconds
+
+pragma directive defines a prior version to 0.5.12. Changing pragma version to 0.5.12....
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Wallet
+Line:        11
+Source: 
+>     // Deposit funds in contract
+>     function deposit(uint amount) public payable {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(msg.value == amount, 'msg.value must be equal to amount');
+
+[0m
+[0;31mSeverity:    LOW
+Pattern:     External Calls of Functions
+Description: A public function that is never called within the
+             contract should be marked as external
+Type:        Violation
+Contract:    Wallet
+Line:        17
+Source: 
+>     // Withdraw funds from contract
+>     function withdraw(uint amount) public {
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>         require(amount <= balance[msg.sender], 'amount must be less than balance');
+
+[0m
+[0;31mSeverity:    MEDIUM
+Pattern:     Locked Ether
+Description: Contracts that may receive ether must also allow users to
+             extract the deposited ether from the contract.
+Type:        Violation
+Contract:    Wallet
+Line:        7
+Source: 
+> 
+> contract Wallet {
+> ^^^^^^^^^^^^^^^^^
+>     mapping(address => uint) balance;
+
+[0m
+[0;31mSeverity:    INFO
+Pattern:     State variables default visibility
+Description: Visibility of state variables should be stated explicitly
+Type:        Violation
+Contract:    Wallet
+Line:        8
+Source: 
+> contract Wallet {
+>     mapping(address => uint) balance;
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 
+
+[0m
