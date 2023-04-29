@@ -9,9 +9,9 @@ do
 	end_time=$(date +%s.%3N)
 	elapsed_time=$(awk "BEGIN {print $end_time - $start_time}")
         total_time=$(awk "BEGIN {print $total_time + $elapsed_time}")
-        echo "Execution time: ${elapsed_time} ms" >> "./results/oyente_${filename%.*}.txt"
+        echo "Execution time: ${elapsed_time} s" >> "./results/oyente_${filename%.*}.txt"
 
 done
 
 average_time=$(awk "BEGIN {print $total_time / 14}")
-echo "Average execution time: ${average_time} ms"
+echo "Average execution time: ${average_time} s"
