@@ -15,6 +15,6 @@ do
 	echo "Execution time: ${elapsed_time} ms" >> "./results/osiris_${filename%.*}.txt"
 done
 
-average_time=$(awk "BEGIN {print $total_time / $file_count}")
+average_time=$(awk "BEGIN {print $total_time / 13}")
 
 echo "Average execution time: ${average_time} ms"
