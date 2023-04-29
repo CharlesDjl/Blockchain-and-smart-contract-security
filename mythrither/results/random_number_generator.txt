@@ -1,0 +1,13 @@
+INFO:Detectors:
+RandomNumberGenerator.random(uint256) (../sol_file/random_number_generator.sol#7-15) uses a weak PRNG: "uint256((h / x)) % max + 1 (../sol_file/random_number_generator.sol#14)" 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#weak-PRNG
+INFO:Detectors:
+RandomNumberGenerator.random(uint256) (../sol_file/random_number_generator.sol#7-15) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/random_number_generator.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/random_number_generator.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+分析时间：2.088539361 s
+The analysis was completed successfully. No issues were detected.

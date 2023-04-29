@@ -1,0 +1,14 @@
+Compilation warnings/errors on ../sol_file/no_pragma.sol:
+../sol_file/no_pragma.sol:2:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.23;"
+contract PragmaNotLocked {
+^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+solc-0.4.23 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+PragmaNotLocked.x (../sol_file/no_pragma.sol#3) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:../sol_file/no_pragma.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+分析时间：3.184181432 s
+The analysis was completed successfully. No issues were detected.

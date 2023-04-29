@@ -1,0 +1,11 @@
+INFO:Detectors:
+DosGas (../sol_file/dos_address.sol#3-29) contract sets array length with a user-controlled value:
+	- creditorAddresses.push(msg.sender) (../sol_file/dos_address.sol#17)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#array-length-assignment
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/dos_address.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/dos_address.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+分析时间：5.135984237 s
+The analysis was completed successfully. No issues were detected.

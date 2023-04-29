@@ -1,0 +1,45 @@
+INFO:Detectors:
+Proxy.forward(address,bytes) (../sol_file/proxy.sol#11-13) uses delegatecall to a input-controlled function id
+	- require(bool)(callee.delegatecall(_data)) (../sol_file/proxy.sol#12)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#controlled-delegatecall
+INFO:Detectors:
+Pragma version^0.4.24 (../sol_file/proxy.sol#1) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in Proxy.forward(address,bytes) (../sol_file/proxy.sol#11-13):
+	- require(bool)(callee.delegatecall(_data)) (../sol_file/proxy.sol#12)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter Proxy.forward(address,bytes)._data (../sol_file/proxy.sol#11) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+forward(address,bytes) should be declared external:
+	- Proxy.forward(address,bytes) (../sol_file/proxy.sol#11-13)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Slither:../sol_file/proxy.sol analyzed (1 contracts with 85 detectors), 6 result(s) found
+分析时间：13.821085623 s
+==== Delegatecall to user-supplied address ====
+SWC ID: 112
+Severity: High
+Contract: Proxy
+Function name: forward(address,bytes)
+PC address: 337
+Estimated Gas Usage: 1312 - 38273
+The contract delegates execution to another contract with a user-supplied address.
+The smart contract delegates execution to a user-supplied address.This could allow an attacker to execute arbitrary code in the context of this contract account and manipulate the state of the contract account or execute actions on its behalf.
+--------------------
+In file: ../sol_file/proxy.sol:12
+
+callee.delegatecall(_data)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: forward(address,bytes), txdata: 0x6fadcf72010101010101010101010101deadbeefdeadbeefdeadbeefdeadbeefdeadbeef20, value: 0x0

@@ -1,0 +1,21 @@
+Compilation warnings/errors on ../sol_file/typo_safe_math.sol:
+../sol_file/typo_safe_math.sol:75:20: Warning: Use of unary + is deprecated.
+        numberOne =+ 1;
+                   ^-^
+
+INFO:Detectors:
+TypoSafeMath.addOne() (../sol_file/typo_safe_math.sol#74-76) uses an dangerous unary operator: numberOne = + 1 (../sol_file/typo_safe_math.sol#75)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-unary-expressions
+INFO:Detectors:
+SafeMath.div(uint256,uint256) (../sol_file/typo_safe_math.sol#29-35) is never used and should be removed
+SafeMath.mod(uint256,uint256) (../sol_file/typo_safe_math.sol#61-64) is never used and should be removed
+SafeMath.mul(uint256,uint256) (../sol_file/typo_safe_math.sol#12-24) is never used and should be removed
+SafeMath.sub(uint256,uint256) (../sol_file/typo_safe_math.sol#40-45) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/typo_safe_math.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/typo_safe_math.sol analyzed (2 contracts with 85 detectors), 7 result(s) found
+分析时间：10.456142469 s
+The analysis was completed successfully. No issues were detected.

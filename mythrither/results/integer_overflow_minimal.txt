@@ -1,0 +1,30 @@
+INFO:Detectors:
+Pragma version^0.4.19 (../sol_file/integer_overflow_minimal.sol#4) allows old versions
+solc-0.4.19 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/integer_overflow_minimal.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+分析时间：5.237509815 s
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: IntegerOverflowMinimal
+Function name: run(uint256)
+PC address: 162
+Estimated Gas Usage: 6019 - 26114
+The arithmetic operator can underflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/integer_overflow_minimal.sol:10
+
+count -= input
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: run(uint256), txdata: 0xa444f5e901, decoded_data: (452312848583266388373324160190187140051835877600158453279131187530910662656,), value: 0x0

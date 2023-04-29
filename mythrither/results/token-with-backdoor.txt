@@ -1,0 +1,20 @@
+Compilation warnings/errors on ../sol_file/token-with-backdoor.sol:
+../sol_file/token-with-backdoor.sol:27:4: Warning: No visibility specified. Defaulting to "public". 
+   function test_invariants() {
+   ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/token-with-backdoor.sol:27:4: Warning: Function state mutability can be restricted to view
+   function test_invariants() {
+   ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Backdoor function found in Token.backdoor() (../sol_file/token-with-backdoor.sol#23-25)
+Reference: https://github.com/trailofbits/slither/wiki/Adding-a-new-detector
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/token-with-backdoor.sol#9) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function Token.test_invariants() (../sol_file/token-with-backdoor.sol#27-29) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/token-with-backdoor.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+分析时间：12.503266690 s
+The analysis was completed successfully. No issues were detected.

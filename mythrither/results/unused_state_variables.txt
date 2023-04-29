@@ -1,0 +1,145 @@
+Compilation warnings/errors on ../sol_file/unused_state_variables.sol:
+../sol_file/base.sol:2:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+../sol_file/unused_state_variables.sol:2:1: Warning: Experimental features are turned on. Do not use experimental features on live deployments.
+pragma experimental ABIEncoderV2;
+^-------------------------------^
+../sol_file/unused_state_variables.sol:16:5: Warning: Function state mutability can be restricted to view
+    function assign3(A memory x) public returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/unused_state_variables.sol:20:5: Warning: Function state mutability can be restricted to view
+    function ret() public returns (int){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+DerivedA.call(int256).a (../sol_file/unused_state_variables.sol#12) shadows:
+	- Base.a (../sol_file/base.sol#6) (state variable)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+Pragma version>=0.5.0 (../sol_file/base.sol#1) allows old versions
+Pragma version>=0.5.0 (../sol_file/unused_state_variables.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Base.c (../sol_file/base.sol#10) is never used in DerivedA (../sol_file/unused_state_variables.sol#6-26)
+DerivedA.i (../sol_file/unused_state_variables.sol#8) is never used in DerivedA (../sol_file/unused_state_variables.sol#6-26)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+Base.a (../sol_file/base.sol#6) should be constant 
+Base.b (../sol_file/base.sol#7) should be constant 
+Base.c (../sol_file/base.sol#10) should be constant 
+DerivedA.j (../sol_file/unused_state_variables.sol#10) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+assign3(Base.A) should be declared external:
+	- DerivedA.assign3(Base.A) (../sol_file/unused_state_variables.sol#16-18)
+Moreover, the following function parameters should change its data location:
+x location should be calldata
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Detectors:
+The function DerivedA.ret() (../sol_file/unused_state_variables.sol#20-23) reads this.e() (../sol_file/unused_state_variables.sol#21) with `this` which adds an extra STATICCALL.
+Reference: https://github.com/crytic/slither/wiki/Vulnerabilities-Description#public-variable-read-in-external-context
+INFO:Slither:../sol_file/unused_state_variables.sol analyzed (2 contracts with 85 detectors), 12 result(s) found
+分析时间：54.421156997 s
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: DerivedA
+Function name: assign1(int256)
+PC address: 719
+Estimated Gas Usage: 6264 - 26359
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/base.sol:25
+
+e += x
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: call(int256), txdata: 0x1b5852380000000000000000000000000000000000000000000000000000000000000001, decoded_data: (1,), value: 0x0
+Caller: [CREATOR], function: assign1(int256), txdata: 0x2114aec4ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, decoded_data: (-1,), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: DerivedA
+Function name: call(int256)
+PC address: 719
+Estimated Gas Usage: 6271 - 26366
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/base.sol:25
+
+e += x
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: call(int256), txdata: 0x1b5852380000000000000000000000000000000000000000000000000000000000000001, decoded_data: (1,), value: 0x0
+Caller: [CREATOR], function: call(int256), txdata: 0x1b585238ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, decoded_data: (-1,), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: DerivedA
+Function name: assign3((uint256))
+PC address: 773
+Estimated Gas Usage: 3391 - 4238
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/unused_state_variables.sol:17
+
+g[1] + x.a
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: assign3((uint256)), txdata: 0x56ac1e84fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe, decoded_data: ([115792089237316195423570985008687907853269984665640564039457584007913129639934],), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: DerivedA
+Function name: assign3((uint256))
+PC address: 774
+Estimated Gas Usage: 3391 - 4238
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/unused_state_variables.sol:17
+
+g[1] + x.a + uint(j)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: assign3((uint256)), txdata: 0x56ac1e84ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff06, decoded_data: ([115792089237316195423570985008687907853269984665640564039457584007913129639686],), value: 0x0

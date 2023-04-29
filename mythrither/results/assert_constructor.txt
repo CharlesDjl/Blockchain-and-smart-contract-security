@@ -1,0 +1,29 @@
+INFO:Detectors:
+Pragma version^0.4.19 (../sol_file/assert_constructor.sol#6) allows old versions
+solc-0.4.19 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/assert_constructor.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+分析时间：1.868989591 s
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: AssertConstructor
+Function name: constructor
+PC address: 22
+Estimated Gas Usage: 59 - 154
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+In file: ../sol_file/assert_constructor.sol:10
+
+assert(false)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0

@@ -1,0 +1,43 @@
+INFO:Detectors:
+FunctionTypes.withdraw() (../sol_file/FunctionTypes.sol#12-15) sends eth to arbitrary user
+	Dangerous calls:
+	- address(msg.sender).transfer(address(this).balance) (../sol_file/FunctionTypes.sol#14)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations
+INFO:Detectors:
+FunctionTypes.breakIt() (../sol_file/FunctionTypes.sol#22-28) uses assembly
+	- INLINE ASM (../sol_file/FunctionTypes.sol#26-27)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+FunctionTypes.frwd() (../sol_file/FunctionTypes.sol#17-18) is never used and should be removed
+FunctionTypes.withdraw() (../sol_file/FunctionTypes.sol#12-15) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/FunctionTypes.sol#6) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/FunctionTypes.sol analyzed (1 contracts with 85 detectors), 6 result(s) found
+分析时间：4.145031217 s
+==== Jump to an arbitrary instruction ====
+SWC ID: 127
+Severity: High
+Contract: FunctionTypes
+Function name: breakIt()
+PC address: 264
+Estimated Gas Usage: 283 - 1037
+The caller can redirect execution to arbitrary bytecode locations.
+It is possible to redirect the control flow to arbitrary locations in the code. This may allow an attacker to bypass security controls or manipulate the business logic of the smart contract. Avoid using low-level-operations and assembly to prevent this issue.
+--------------------
+In file: ../sol_file/FunctionTypes.sol:27
+
+func.f()
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x3000000000000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x100000000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x1
+Caller: [ATTACKER], function: breakIt(), txdata: 0x6a1f9e19, value: 0x1

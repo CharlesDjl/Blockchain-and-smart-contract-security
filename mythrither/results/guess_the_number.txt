@@ -1,0 +1,33 @@
+INFO:Detectors:
+GuessTheNumber.checkAndTransferPrize(uint256,uint256,address) (../sol_file/guess_the_number.sol#35-46) sends eth to arbitrary user
+	Dangerous calls:
+	- guesser.transfer(p) (../sol_file/guess_the_number.sol#39)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations
+INFO:Detectors:
+../sol_file/guess_the_number.sol contains a unicode right-to-left-override character at byte offset 692:
+	- b'        checkAndTransferPrize(/*The prize\xe2\x80\xae/*rebmun desseug*/n , p/*\xe2\x80\xad'
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#right-to-left-override-character
+INFO:Detectors:
+GuessTheNumber.checkAndTransferPrize(uint256,uint256,address) (../sol_file/guess_the_number.sol#35-46) uses a dangerous strict equality:
+	- n == _secretNumber (../sol_file/guess_the_number.sol#37)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/guess_the_number.sol#5) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Event GuessTheNumbersuccess(string) (../sol_file/guess_the_number.sol#11) is not in CapWords
+Event GuessTheNumberwrongNumber(string) (../sol_file/guess_the_number.sol#12) is not in CapWords
+Variable GuessTheNumber._secretNumber (../sol_file/guess_the_number.sol#9) is not in mixedCase
+Variable GuessTheNumber._owner (../sol_file/guess_the_number.sol#10) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Reentrancy in GuessTheNumber.checkAndTransferPrize(uint256,uint256,address) (../sol_file/guess_the_number.sol#35-46):
+	External calls:
+	- guesser.transfer(p) (../sol_file/guess_the_number.sol#39)
+	Event emitted after the call(s):
+	- success(You guessed the correct number!) (../sol_file/guess_the_number.sol#40)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+INFO:Slither:../sol_file/guess_the_number.sol analyzed (1 contracts with 85 detectors), 10 result(s) found
+分析时间：19.054280222 s
+The analysis was completed successfully. No issues were detected.

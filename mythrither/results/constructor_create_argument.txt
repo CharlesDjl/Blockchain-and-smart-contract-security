@@ -1,0 +1,20 @@
+Compilation warnings/errors on ../sol_file/constructor_create_argument.sol:
+../sol_file/constructor_create_argument.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_argument.sol:19:5: Warning: No visibility specified. Defaulting to "public". 
+    constructor(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_argument.sol:23:5: Warning: No visibility specified. Defaulting to "public". 
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_argument.sol:23:5: Warning: Function state mutability can be restricted to view
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/constructor_create_argument.sol#5) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/constructor_create_argument.sol analyzed (2 contracts with 85 detectors), 2 result(s) found
+分析时间：7.061564821 s
+The analysis was completed successfully. No issues were detected.

@@ -1,0 +1,101 @@
+Compilation warnings/errors on ../sol_file/wallet_04_confused_sign.sol:
+../sol_file/wallet_04_confused_sign.sol:32:21: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        to.transfer(this.balance);
+                    ^----------^
+
+INFO:Detectors:
+Wallet.migrateTo(address).to (../sol_file/wallet_04_confused_sign.sol#30) lacks a zero-check on :
+		- to.transfer(this.balance) (../sol_file/wallet_04_confused_sign.sol#32)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Pragma version^0.4.24 (../sol_file/wallet_04_confused_sign.sol#1) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Reentrancy in Wallet.withdraw(uint256) (../sol_file/wallet_04_confused_sign.sol#22-26):
+	External calls:
+	- msg.sender.transfer(amount) (../sol_file/wallet_04_confused_sign.sol#24)
+	State variables written after the call(s):
+	- balances[msg.sender] -= amount (../sol_file/wallet_04_confused_sign.sol#25)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+INFO:Slither:../sol_file/wallet_04_confused_sign.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+分析时间：35.449122330 s
+==== Unprotected Ether Withdrawal ====
+SWC ID: 105
+Severity: High
+Contract: Wallet
+Function name: withdraw(uint256)
+PC address: 340
+Estimated Gas Usage: 7840 - 62501
+Any sender can withdraw Ether from the contract account.
+Arbitrary senders other than the contract creator can profitably extract Ether from the contract account. Verify the business logic carefully and make sure that appropriate security controls are in place to prevent unexpected loss of funds.
+--------------------
+In file: ../sol_file/wallet_04_confused_sign.sol:24
+
+msg.sender.transfer(amount)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x20940022e302, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: deposit(), txdata: 0xd0e30db0, value: 0x1
+Caller: [ATTACKER], function: withdraw(uint256), txdata: 0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000001, decoded_data: (1,), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: Wallet
+Function name: withdraw(uint256)
+PC address: 433
+Estimated Gas Usage: 7840 - 62501
+The arithmetic operator can underflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/wallet_04_confused_sign.sol:25
+
+balances[msg.sender] -= amount
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x10000000000000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x10000000000000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: deposit(), txdata: 0xd0e30db0, value: 0x1
+Caller: [CREATOR], function: withdraw(uint256), txdata: 0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000001, decoded_data: (1,), value: 0x0
+
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: Wallet
+Function name: deposit()
+PC address: 769
+Estimated Gas Usage: 1955 - 2430
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+In file: ../sol_file/wallet_04_confused_sign.sol:17
+
+function deposit() public payable {
+    	assert(balances[msg.sender] + msg.value > balances[msg.sender]);
+        balances[msg.sender] += msg.value;
+    }
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: deposit(), txdata: 0xd0e30db0, value: 0x0

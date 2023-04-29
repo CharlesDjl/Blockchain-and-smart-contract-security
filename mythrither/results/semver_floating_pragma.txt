@@ -1,0 +1,101 @@
+Compilation warnings/errors on ../sol_file/semver_floating_pragma.sol:
+../sol_file/semver_floating_pragma.sol:5:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24 - 0.5.2;
+^-----------------------------^
+../sol_file/semver_floating_pragma.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity >=0.4.24 <=0.5.3 ~0.4.20;
+^---------------------------------------^
+../sol_file/semver_floating_pragma.sol:8:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ~0.4.20;
+^----------------------^
+
+Traceback (most recent call last):
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 561, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/slither_analyzer-0.9.3-py3.10.egg/slither/__main__.py", line 837, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/slither_analyzer-0.9.3-py3.10.egg/slither/__main__.py", line 90, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 643, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 131, in __init__
+    self._compile(**kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 553, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 156, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 285, in _get_targets_json
+    return _run_solc(
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 565, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation ../sol_file/semver_floating_pragma.sol:5:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24 - 0.5.2;
+^-----------------------------^
+../sol_file/semver_floating_pragma.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity >=0.4.24 <=0.5.3 ~0.4.20;
+^---------------------------------------^
+../sol_file/semver_floating_pragma.sol:8:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ~0.4.20;
+^----------------------^
+
+ERROR:root:Error in ../sol_file/semver_floating_pragma.sol
+ERROR:root:Traceback (most recent call last):
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 561, in _run_solc
+    ret: Dict = json.loads(stdout)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/slither_analyzer-0.9.3-py3.10.egg/slither/__main__.py", line 837, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/slither_analyzer-0.9.3-py3.10.egg/slither/__main__.py", line 90, in process_all
+    compilations = compile_all(target, **vars(args))
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 643, in compile_all
+    compilations.append(CryticCompile(target, **kwargs))
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 131, in __init__
+    self._compile(**kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/crytic_compile.py", line 553, in _compile
+    self._platform.compile(self, **kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 156, in compile
+    targets_json = _get_targets_json(compilation_unit, self._target, **kwargs)
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 285, in _get_targets_json
+    return _run_solc(
+  File "/home/charlesdjl/miniconda3/envs/slither/lib/python3.10/site-packages/crytic_compile-0.3.1-py3.10.egg/crytic_compile/platform/solc.py", line 565, in _run_solc
+    raise InvalidCompilation(f"Invalid solc compilation {stderr}")
+crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation ../sol_file/semver_floating_pragma.sol:5:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24 - 0.5.2;
+^-----------------------------^
+../sol_file/semver_floating_pragma.sol:6:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity >=0.4.24 <=0.5.3 ~0.4.20;
+^---------------------------------------^
+../sol_file/semver_floating_pragma.sol:8:1: Error: Source file requires different compiler version (current compiler is 0.4.19+commit.c4cbbb05.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ~0.4.20;
+^----------------------^
+
+
+分析时间：1.681585142 s
+mythril.interfaces.cli [ERROR]: Solc experienced a fatal error.
+
+../sol_file/semver_floating_pragma.sol:5:1: ParserError: Source file requires different compiler version (current compiler is 0.5.16+commit.9c3226ce.Linux.g++ - note that nightly builds are considered to be strictly less than the released version
+pragma solidity 0.4.24 - 0.5.2;
+^-----------------------------^
+
+SolidityVersionMismatch: Try adding the option "--solv <version_number>"

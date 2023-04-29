@@ -1,0 +1,46 @@
+Compilation warnings/errors on ../sol_file/multiowned_vulnerable.sol:
+../sol_file/multiowned_vulnerable.sol:50:25: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+    msg.sender.transfer(this.balance);
+                        ^----------^
+../sol_file/multiowned_vulnerable.sol:49:3: Warning: No visibility specified. Defaulting to "public". 
+  function withdrawAll() onlyOwner {
+  ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/multiowned_vulnerable.sol:53:3: Warning: No visibility specified. Defaulting to "public". 
+  function() payable {
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.4.23 (../sol_file/multiowned_vulnerable.sol#1) allows old versions
+solc-0.4.23 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter MultiOwnable.newOwner(address)._owner (../sol_file/multiowned_vulnerable.sol#31) is not in mixedCase
+Parameter MultiOwnable.deleteOwner(address)._owner (../sol_file/multiowned_vulnerable.sol#40) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/multiowned_vulnerable.sol analyzed (2 contracts with 85 detectors), 4 result(s) found
+分析时间：134.509722480 s
+==== Unprotected Ether Withdrawal ====
+SWC ID: 105
+Severity: High
+Contract: TestContract
+Function name: withdrawAll()
+PC address: 789
+Estimated Gas Usage: 2629 - 37430
+Any sender can withdraw Ether from the contract account.
+Arbitrary senders other than the contract creator can profitably extract Ether from the contract account. Verify the business logic carefully and make sure that appropriate security controls are in place to prevent unexpected loss of funds.
+--------------------
+In file: ../sol_file/multiowned_vulnerable.sol:50
+
+msg.sender.transfer(this.balance)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x4, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x144f06290600608a8, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x1
+Caller: [ATTACKER], function: newOwner(address), txdata: 0x85952454000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef, decoded_data: ('0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef',), value: 0x0
+Caller: [ATTACKER], function: withdrawAll(), txdata: 0x853828b6, value: 0x0

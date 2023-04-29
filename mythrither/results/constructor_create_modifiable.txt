@@ -1,0 +1,26 @@
+Compilation warnings/errors on ../sol_file/constructor_create_modifiable.sol:
+../sol_file/constructor_create_modifiable.sol:14:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_modifiable.sol:23:5: Warning: No visibility specified. Defaulting to "public". 
+    constructor(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_modifiable.sol:27:5: Warning: No visibility specified. Defaulting to "public". 
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_modifiable.sol:31:5: Warning: No visibility specified. Defaulting to "public". 
+    function set_x(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/constructor_create_modifiable.sol:27:5: Warning: Function state mutability can be restricted to view
+    function foo() returns(uint){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/constructor_create_modifiable.sol#9) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function B.set_x(uint256) (../sol_file/constructor_create_modifiable.sol#31-33) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/constructor_create_modifiable.sol analyzed (2 contracts with 85 detectors), 3 result(s) found
+分析时间：9.680495195 s
+The analysis was completed successfully. No issues were detected.

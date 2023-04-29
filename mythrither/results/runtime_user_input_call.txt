@@ -1,0 +1,66 @@
+Compilation warnings/errors on ../sol_file/runtime_user_input_call.sol:
+../sol_file/runtime_user_input_call.sol:9:5: Warning: No visibility specified. Defaulting to "public".
+    function check(address b){
+    ^
+Spanning multiple lines.
+../sol_file/runtime_user_input_call.sol:16:5: Warning: No visibility specified. Defaulting to "public".
+    function foo() returns(uint);
+    ^---------------------------^
+
+INFO:Detectors:
+Pragma version^0.4.19 (../sol_file/runtime_user_input_call.sol#5) allows old versions
+solc-0.4.19 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/runtime_user_input_call.sol analyzed (2 contracts with 85 detectors), 2 result(s) found
+分析时间：6.176394215 s
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: RuntimeUserInputCall
+Function name: check(address)
+PC address: 243
+Estimated Gas Usage: 1768 - 36518
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+In file: ../sol_file/runtime_user_input_call.sol:10
+
+B(b).foo()
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: check(address), txdata: 0xc23697a8efefefefefefefefefefefefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef, value: 0x0
+
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: RuntimeUserInputCall
+Function name: check(address)
+PC address: 272
+Estimated Gas Usage: 1756 - 36506
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+In file: ../sol_file/runtime_user_input_call.sol:9
+
+function check(address b){
+        assert(B(b).foo() == 10);
+    }
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: check(address), txdata: 0xc23697a8, value: 0x0

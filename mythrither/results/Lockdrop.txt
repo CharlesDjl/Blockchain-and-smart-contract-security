@@ -1,0 +1,35 @@
+INFO:Detectors:
+Lockdrop.lock(Lockdrop.Term,bytes,bool) (../sol_file/Lockdrop.sol#57-71) uses a dangerous strict equality:
+	- assert(bool)(address(lockAddr).balance == msg.value) (../sol_file/Lockdrop.sol#69)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Contract locking ether found:
+	Contract Lock (../sol_file/Lockdrop.sol#7-30) has payable functions:
+	 - Lock.constructor(address,uint256) (../sol_file/Lockdrop.sol#10-15)
+	 - Lock.fallback() (../sol_file/Lockdrop.sol#20-29)
+	But does not have a function to withdraw the ether
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#contracts-that-lock-ether
+INFO:Detectors:
+Lockdrop.lock(Lockdrop.Term,bytes,bool) (../sol_file/Lockdrop.sol#57-71) uses timestamp for comparisons
+	Dangerous comparisons:
+	- assert(bool)(address(lockAddr).balance == msg.value) (../sol_file/Lockdrop.sol#69)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Lock.constructor(address,uint256) (../sol_file/Lockdrop.sol#10-15) uses assembly
+	- INLINE ASM (../sol_file/Lockdrop.sol#11-15)
+Lock.fallback() (../sol_file/Lockdrop.sol#20-29) uses assembly
+	- INLINE ASM (../sol_file/Lockdrop.sol#21-29)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/Lockdrop.sol#5) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter Lockdrop.addressFrom(address,uint32)._origin (../sol_file/Lockdrop.sol#117) is not in mixedCase
+Parameter Lockdrop.addressFrom(address,uint32)._nonce (../sol_file/Lockdrop.sol#117) is not in mixedCase
+Variable Lockdrop.LOCK_START_TIME (../sol_file/Lockdrop.sol#40) is not in mixedCase
+Variable Lockdrop.LOCK_END_TIME (../sol_file/Lockdrop.sol#41) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/Lockdrop.sol analyzed (2 contracts with 85 detectors), 11 result(s) found
+分析时间：180.033036639 s
+分析超时：Lockdrop.sol

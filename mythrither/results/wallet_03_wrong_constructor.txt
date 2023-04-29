@@ -1,0 +1,49 @@
+Compilation warnings/errors on ../sol_file/wallet_03_wrong_constructor.sol:
+../sol_file/wallet_03_wrong_constructor.sol:31:21: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        to.transfer(this.balance);
+                    ^----------^
+
+INFO:Detectors:
+Wallet.migrateTo(address).to (../sol_file/wallet_03_wrong_constructor.sol#29) lacks a zero-check on :
+		- to.transfer(this.balance) (../sol_file/wallet_03_wrong_constructor.sol#31)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Pragma version^0.4.24 (../sol_file/wallet_03_wrong_constructor.sol#1) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Reentrancy in Wallet.withdraw(uint256) (../sol_file/wallet_03_wrong_constructor.sol#21-25):
+	External calls:
+	- msg.sender.transfer(amount) (../sol_file/wallet_03_wrong_constructor.sol#23)
+	State variables written after the call(s):
+	- balances[msg.sender] -= amount (../sol_file/wallet_03_wrong_constructor.sol#24)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+INFO:Slither:../sol_file/wallet_03_wrong_constructor.sol analyzed (1 contracts with 85 detectors), 4 result(s) found
+分析时间：39.732299511 s
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: Wallet
+Function name: deposit()
+PC address: 869
+Estimated Gas Usage: 1977 - 2452
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+In file: ../sol_file/wallet_03_wrong_constructor.sol:16
+
+function deposit() public payable {
+    	assert(balances[msg.sender] + msg.value > balances[msg.sender]);
+        balances[msg.sender] += msg.value;
+    }
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: deposit(), txdata: 0xd0e30db0, value: 0x0

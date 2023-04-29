@@ -1,0 +1,90 @@
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/time_lock.sol#5) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in TimeLock.withdraw() (../sol_file/time_lock.sol#23-31):
+	- (success) = msg.sender.call.value(amount)() (../sol_file/time_lock.sol#29)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter TimeLock.lockEth(uint256,uint256)._time (../sol_file/time_lock.sol#16) is not in mixedCase
+Parameter TimeLock.lockEth(uint256,uint256)._amount (../sol_file/time_lock.sol#16) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:../sol_file/time_lock.sol analyzed (1 contracts with 85 detectors), 5 result(s) found
+分析时间：46.759705008 s
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: TimeLock
+Function name: lockEth(uint256,uint256)
+PC address: 294
+Estimated Gas Usage: 10504 - 50979
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/time_lock.sol:18
+
+block.number + (_time / 14)
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x2000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: lockEth(uint256,uint256), txdata: 0x1854e8e000007000000000000000000000000000000000000000000000000000dffffd040000000000000000000000000000000000000000000000000000000000000000, decoded_data: (772995590840543144192692656575026850674524204883083294178202716823616772, 0), value: 0x0
+
+==== Dependence on predictable environment variable ====
+SWC ID: 120
+Severity: Low
+Contract: TimeLock
+Function name: withdraw()
+PC address: 697
+Estimated Gas Usage: 1985 - 2460
+A control flow decision is made based on The block.number environment variable.
+The block.number environment variable is used to determine a control flow decision. Note that the values of variables like coinbase, gaslimit, block number and timestamp are predictable and can be manipulated by a malicious miner. Also keep in mind that attackers know hashes of earlier blocks. Don't use any of those environment variables as sources of randomness and be aware that use of these variables introduces a certain level of trust into miners.
+--------------------
+In file: ../sol_file/time_lock.sol:25
+
+require(block.number >= users[msg.sender].unlockBlock, 'lock period not over')
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x56bc0000000000000, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [CREATOR], function: lockEth(uint256,uint256), txdata: 0x1854e8e0e00700000000000000001c00000187fffffffe476e3ffffffffffffffffffd040000000000000000000000000000000000000000000000000000000000000001, decoded_data: (101330446012105119685931705441150890337150231868837690307659757551935085870340, 1), value: 0x1
+Caller: [CREATOR], function: withdraw(), txdata: 0x3ccfd60b, value: 0x0
+
+==== External Call To User-Supplied Address ====
+SWC ID: 107
+Severity: Low
+Contract: TimeLock
+Function name: withdraw()
+PC address: 996
+Estimated Gas Usage: 8938 - 64262
+A call to a user-supplied address is executed.
+An external message call to an address specified by the caller is executed. Note that the callee account might contain arbitrary code and could re-enter any function within this contract. Reentering the contract in an intermediate state may lead to unexpected behaviour. Make sure that no state modifications are executed after this call and/or reentrancy guards are in place.
+--------------------
+In file: ../sol_file/time_lock.sol:29
+
+msg.sender.call.value(amount)("")
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x20000000000000, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: lockEth(uint256,uint256), txdata: 0x1854e8e0afe01404000001c754c80fa69c0003b82084c7658e1260b0df8c9400380003f60000000000000000000000000000000000000000000000000000000000000001, decoded_data: (79550660387348701393196820205024956958689139313244698860482327716221643916278, 1), value: 0x1
+Caller: [ATTACKER], function: withdraw(), txdata: 0x3ccfd60b, value: 0x0

@@ -1,0 +1,36 @@
+Compilation warnings/errors on ../sol_file/sha_of_sha_collision.sol:
+../sol_file/sha_of_sha_collision.sol:14:5: Warning: No visibility specified. Defaulting to "public". 
+    function set(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_collision.sol:17:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_collision.sol:17:5: Warning: Function state mutability can be restricted to view
+    function check(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/sha_of_sha_collision.sol#8) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/sha_of_sha_collision.sol analyzed (1 contracts with 85 detectors), 2 result(s) found
+分析时间：10.069906197 s
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: ShaOfShaCollission
+Function name: check(uint256)
+PC address: 377
+Estimated Gas Usage: 1535 - 3464
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: set(uint256), txdata: 0x60fe47b10000000000000000000000000000000000000000000000000000000000000042, decoded_data: (66,), value: 0x0
+Caller: [ATTACKER], function: check(uint256), txdata: 0x5f72f45041, decoded_data: (29400335157912315244266070412362164103369332044010299463143527189509193072640,), value: 0x0

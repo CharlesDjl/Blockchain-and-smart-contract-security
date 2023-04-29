@@ -1,0 +1,7 @@
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/requirement_simple.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/requirement_simple.sol analyzed (2 contracts with 85 detectors), 2 result(s) found
+分析时间：6.914532401 s
+The analysis was completed successfully. No issues were detected.

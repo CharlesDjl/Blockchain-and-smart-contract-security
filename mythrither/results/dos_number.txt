@@ -1,0 +1,11 @@
+INFO:Detectors:
+DosNumber.insertNnumbers(uint256,uint256) (../sol_file/dos_number.sol#8-17) has costly operations inside a loop:
+	- array[numElements ++] = value (../sol_file/dos_number.sol#15)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Detectors:
+Pragma version^0.4.25 (../sol_file/dos_number.sol#1) allows old versions
+solc-0.4.25 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/dos_number.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+分析时间：14.963808065 s
+The analysis was completed successfully. No issues were detected.

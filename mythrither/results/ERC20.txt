@@ -1,0 +1,23 @@
+Compilation warnings/errors on ../sol_file/ERC20.sol:
+../sol_file/ERC20.sol:80:3: Warning: No visibility specified. Defaulting to "public". 
+  constructor(uint totalSupply){
+  ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+SafeMath.div(uint256,uint256) (../sol_file/ERC20.sol#29-35) is never used and should be removed
+SafeMath.mod(uint256,uint256) (../sol_file/ERC20.sol#61-64) is never used and should be removed
+SafeMath.mul(uint256,uint256) (../sol_file/ERC20.sol#12-24) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Pragma version^0.4.24 (../sol_file/ERC20.sol#1) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+ERC20._totalSupply (../sol_file/ERC20.sol#78) is never used in ERC20 (../sol_file/ERC20.sol#68-123)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+ERC20._totalSupply (../sol_file/ERC20.sol#78) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:../sol_file/ERC20.sol analyzed (2 contracts with 85 detectors), 7 result(s) found
+分析时间：180.029672431 s
+分析超时：ERC20.sol

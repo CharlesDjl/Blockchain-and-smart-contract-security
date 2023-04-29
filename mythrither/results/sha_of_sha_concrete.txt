@@ -1,0 +1,21 @@
+Compilation warnings/errors on ../sol_file/sha_of_sha_concrete.sol:
+../sol_file/sha_of_sha_concrete.sol:12:5: Warning: No visibility specified. Defaulting to "public". 
+    constructor(){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_concrete.sol:16:5: Warning: No visibility specified. Defaulting to "public". 
+    function check(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+../sol_file/sha_of_sha_concrete.sol:16:5: Warning: Function state mutability can be restricted to view
+    function check(uint x){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+ShaOfShaConcrete.m (../sol_file/sha_of_sha_concrete.sol#9) is never initialized. It is used in:
+	- ShaOfShaConcrete.check(uint256) (../sol_file/sha_of_sha_concrete.sol#16-18)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Pragma version^0.4.22 (../sol_file/sha_of_sha_concrete.sol#5) is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+solc-0.4.22 is known to contain severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/sha_of_sha_concrete.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+分析时间：4.372814242 s
+The analysis was completed successfully. No issues were detected.

@@ -1,0 +1,97 @@
+Compilation warnings/errors on ../sol_file/unused_variables.sol:
+../sol_file/unused_variables.sol:7:31: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function unusedArg(int x, int y) public view returns (int z) {
+                              ^---^
+../sol_file/unused_variables.sol:12:69: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function unusedReturn(int x, int y) public pure returns (int m, int n, int o) {
+                                                                    ^---^
+../sol_file/unused_variables.sol:23:13: Warning: Unused local variable.
+            int x = test - z;
+            ^---^
+../sol_file/unused_variables.sol:31:5: Warning: Function state mutability can be restricted to pure
+    function tupleAssignment(int p) public returns (int q, int r){
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/unused_variables.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+UnusedVariables.a (../sol_file/unused_variables.sol#4) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:../sol_file/unused_variables.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+分析时间：8.358003116 s
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: UnusedVariables
+Function name: unusedArg(int256,int256)
+PC address: 495
+Estimated Gas Usage: 1146 - 1522
+The arithmetic operator can overflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/unused_variables.sol:8
+
+x + a
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: unusedArg(int256,int256), txdata: 0x2e591df5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, decoded_data: (-1, -1), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: UnusedVariables
+Function name: tupleAssignment(int256)
+PC address: 555
+Estimated Gas Usage: 434 - 905
+The arithmetic operator can underflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/unused_variables.sol:13
+
+y - x
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: tupleAssignment(int256), txdata: 0x0ee1207d0101010101010101010101010101010101010101010101010101010101010107, decoded_data: (454086624460063511464984254936031011189294057512315937409637584344757371143,), value: 0x0
+
+==== Integer Arithmetic Bugs ====
+SWC ID: 101
+Severity: High
+Contract: UnusedVariables
+Function name: unusedReturn(int256,int256)
+PC address: 555
+Estimated Gas Usage: 478 - 1044
+The arithmetic operator can underflow.
+It is possible to cause an integer overflow or underflow in the arithmetic operation. 
+--------------------
+In file: ../sol_file/unused_variables.sol:13
+
+y - x
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [ATTACKER], function: unusedReturn(int256,int256), txdata: 0xfb90017200000000000000100008010100010010800000000000004080000220010840810000000000000010000400804000400480000000000000408000022000004080, decoded_data: (100434394389563268266203717508001866004368001198636734627969, 100434011077509699257993089901502038501501457957702508494976), value: 0x0

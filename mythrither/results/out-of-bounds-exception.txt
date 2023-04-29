@@ -1,0 +1,41 @@
+Compilation warnings/errors on ../sol_file/out-of-bounds-exception.sol:
+../sol_file/out-of-bounds-exception.sol:7:2: Warning: Function state mutability can be restricted to view
+	function getArrayElement(uint256 idx) public returns (uint256) {
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+INFO:Detectors:
+OutOfBoundsException.array (../sol_file/out-of-bounds-exception.sol#5) is never initialized. It is used in:
+	- OutOfBoundsException.getArrayElement(uint256) (../sol_file/out-of-bounds-exception.sol#7-9)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Pragma version^0.5.0 (../sol_file/out-of-bounds-exception.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:../sol_file/out-of-bounds-exception.sol analyzed (1 contracts with 85 detectors), 3 result(s) found
+分析时间：3.533502030 s
+==== Exception State ====
+SWC ID: 110
+Severity: Medium
+Contract: OutOfBoundsException
+Function name: getArrayElement(uint256)
+PC address: 157
+Estimated Gas Usage: 1043 - 1138
+An assertion violation was triggered.
+It is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).
+--------------------
+In file: ../sol_file/out-of-bounds-exception.sol:7
+
+function getArrayElement(uint256 idx) public returns (uint256) {
+		return array[idx];
+	}
+
+--------------------
+Initial State:
+
+Account: [CREATOR], balance: 0x0, nonce:0, storage:{}
+Account: [ATTACKER], balance: 0x0, nonce:0, storage:{}
+
+Transaction Sequence:
+
+Caller: [CREATOR], calldata: , decoded_data: , value: 0x0
+Caller: [SOMEGUY], function: getArrayElement(uint256), txdata: 0x142edc7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a7a, decoded_data: (55398568184127748398728079102195783365093875016502544363975785290060399278714,), value: 0x0
