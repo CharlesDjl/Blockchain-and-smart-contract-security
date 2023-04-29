@@ -31,5 +31,6 @@ msg.sender.transfer(reward)
 ^
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.457765102386 seconds ---
+INFO:symExec:	 --- 0.480651855469 seconds ---
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.831 ms

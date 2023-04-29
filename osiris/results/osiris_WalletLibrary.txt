@@ -23,7 +23,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.00621795654297 seconds ---
+INFO:symExec:	 --- 0.00607800483704 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/WalletLibrary.sol:WalletLibrary:
@@ -48,5 +48,6 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 50.3592031002 seconds ---
+INFO:symExec:	 --- 50.4793460369 seconds ---
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 51.083 ms

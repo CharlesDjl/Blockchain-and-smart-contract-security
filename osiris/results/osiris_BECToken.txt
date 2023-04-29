@@ -23,7 +23,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.491657018661 seconds ---
+INFO:symExec:	 --- 0.671217918396 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:BecToken:
@@ -45,7 +45,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 50.021214962 seconds ---
+INFO:symExec:	 --- 50.0784249306 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:Ownable:
@@ -63,7 +63,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.291657924652 seconds ---
+INFO:symExec:	 --- 0.315541982651 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:Pausable:
@@ -81,7 +81,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.570695161819 seconds ---
+INFO:symExec:	 --- 0.595164060593 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:PausableToken:
@@ -102,7 +102,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 13.7095580101 seconds ---
+INFO:symExec:	 --- 14.450124979 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:SafeMath:
@@ -120,7 +120,7 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.00717520713806 seconds ---
+INFO:symExec:	 --- 0.00716090202332 seconds ---
 INFO:symExec:	====== Analysis Completed ======
 
 INFO:root:Contract ./Blockchain-and-smart-contract-security/sol_file/BECToken.sol:StandardToken:
@@ -138,5 +138,6 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 1.63235902786 seconds ---
+INFO:symExec:	 --- 1.65872597694 seconds ---
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 69.178 ms
