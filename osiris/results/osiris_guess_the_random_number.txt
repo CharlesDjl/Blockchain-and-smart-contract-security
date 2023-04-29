@@ -23,5 +23,6 @@ INFO:symExec:	  Callstack bug: 	 False
 INFO:symExec:	  Concurrency bug: 	 False
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 0.318826913834 seconds ---
+INFO:symExec:	 --- 0.343371868134 seconds ---
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.697 ms

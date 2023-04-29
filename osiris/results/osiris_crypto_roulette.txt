@@ -37,5 +37,6 @@ msg.sender.transfer(this.balance)
 ^
 INFO:symExec:	  Time dependency bug: 	 False
 INFO:symExec:	  Reentrancy bug: 	 False
-INFO:symExec:	 --- 43.5988941193 seconds ---
+INFO:symExec:	 --- 45.1147620678 seconds ---
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 45.498 ms
