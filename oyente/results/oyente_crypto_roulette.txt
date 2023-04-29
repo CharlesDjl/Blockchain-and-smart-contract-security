@@ -25,3 +25,4 @@ Integer Overflow occurs if:
     number = 2
     betPrice = 0
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 1.766 ms

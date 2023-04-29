@@ -13,6 +13,7 @@ INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
 INFO:symExec:./Blockchain-and-smart-contract-security/sol_file/integer_overflow_minimal.sol:10:9: Warning: Integer Underflow.
         count -= input
 Integer Underflow occurs if:
-    input = 1
     count = 0
+    input = 1
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.538 ms

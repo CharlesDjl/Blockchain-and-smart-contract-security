@@ -17,3 +17,4 @@ Flow2
 ./Blockchain-and-smart-contract-security/sol_file/eth_tx_order_dependence_minimal.sol:29:9: Warning: Transaction-Ordering Dependency.
         msg.sender.transfer(reward)
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.901 ms

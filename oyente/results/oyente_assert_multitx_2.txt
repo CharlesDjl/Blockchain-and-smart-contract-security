@@ -11,3 +11,4 @@ INFO:symExec:	  Transaction-Ordering Dependence (TOD): False
 INFO:symExec:	  Timestamp Dependency: 		 False
 INFO:symExec:	  Re-Entrancy Vulnerability: 		 False
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.499 ms

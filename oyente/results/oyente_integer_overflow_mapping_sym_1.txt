@@ -16,3 +16,4 @@ Integer Underflow occurs if:
     map[k] = 0
     v = 1
 INFO:symExec:	====== Analysis Completed ======
+Execution time: 0.631 ms
