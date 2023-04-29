@@ -9,7 +9,7 @@ do
 	filename=$(basename "$file")
 	start_time=$(date +%s%3N)
 	python -u osiris/osiris.py -s "$file" 2>&1 | tee "./results/osiris_${filename%.*}.txt" > /dev/null
-	end_time=$((date + %s%3N))
+	end_time=$((date +%s%3N))
 	elapsed_time=$(($end_time - $start_time))
         total_time=$(($total_time + $elapsed_time))
 	echo "Execution time: ${elapsed_time} ms" >> "./results/osiris_${filename%.*}.txt"

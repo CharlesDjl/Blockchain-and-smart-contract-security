@@ -6,7 +6,7 @@ do
         filename=$(basename "$file")
         start_time=$(date +%s%3N)
 	python -u oyente.py -s "$file" 2>&1 | tee "./results/oyente_${filename%.*}.txt" > /dev/null
-	end_time=$((date + %s%3N))
+	end_time=$((date +%s%3N))
 	elapsed_time=$(($end_time - $start_time))
         total_time=$(($total_time + $elapsed_time))
         echo "Execution time: ${elapsed_time} ms" >> "./results/oyente_${filename%.*}.txt"
