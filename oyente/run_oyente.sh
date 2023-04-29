@@ -13,5 +13,5 @@ do
 
 done
 
-average_time=$(awk "BEGIN {print $total_time / $file_count}")
+average_time=$(awk "BEGIN {print $total_time / 14}")
 echo "Average execution time: ${average_time} ms"
